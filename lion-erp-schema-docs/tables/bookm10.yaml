@@ -1,0 +1,63 @@
+table: bookm10
+database: LionGroupRPM
+module: BOOKM（預訂管理）
+aliases:
+- 團體訂單主檔
+- CTO元件預訂
+- 預訂管理
+- 團體預訂主檔
+- 團體預訂明細
+- bookm10
+- OKM10
+- BOOKM10
+description: 團體訂單主檔（CTO元件預訂）
+columns:
+- name: __bk10_prod__
+  type: varchar
+  description: 團號
+  note: 關聯 tppdm10（團體主檔）
+  pk: true
+- name: __bk10_fdate__
+  type: date
+  description: 行程日期
+  note: 該元件服務的日期
+- name: __bk10_seq__
+  type: int
+  description: 序號
+  note: 同一天內的元件排序
+- name: __bk10_cto__
+  type: varchar(1)
+  description: 類別
+  note: '`H`=旅館, `M`=餐, `B`=車, `V`=景點, `S`=商店'
+- name: __bk10_cto2__
+  type: varchar(1)
+  description: 類別2（餐廳專用）
+  note: '`1`=早餐, `3`=午餐, `5`=晚餐 （僅餐廳類別使用）'
+- name: __bk10_ctokey__
+  type: varchar
+  description: 元件代碼
+  note: 關聯供應商主檔（opagm/ophtm/opmtm等）
+- name: __bk10_desc__
+  type: text
+  description: 行程說明
+  note: 該元件的詳細說明
+- name: __bk10_ftime__
+  type: time
+  description: 時間
+  note: 服務發生時間（如用餐時間、接車時間）
+- name: __bk10_prodcomp__
+  type: varchar
+  description: 控團公司
+  note: 負責該團的公司別
+- name: __bk10_prof__
+  type: varchar
+  description: 控團單位
+  note: For itin 判斷用（行程表生成時的單位判斷）
+- name: __bk10_mdate__
+  type: datetime
+  description: 當地維護時間
+  note: 最後異動時間
+- name: __bk10_mstfn__
+  type: varchar
+  description: 維護者姓名及時區
+  note: 格式：`單位+姓名+空格+時區` 例：`資訊王大明 TW`

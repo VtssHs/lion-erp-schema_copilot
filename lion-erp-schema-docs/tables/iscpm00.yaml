@@ -1,0 +1,238 @@
+table: iscpm00
+database: LionGroupRPM
+module: ISCPM（Infrastructure System Company Master）
+aliases:
+- 公司主檔
+- 供應商主檔
+- iscpm00
+- CPM00
+- ISCPM00
+description: 公司主檔（供應商主檔）。前台公司下拉選單分類管理（如按地區/業務類型分組）
+columns:
+- name: comp_comp
+  type: varchar(10)
+  pk: true
+  description: 公司代碼
+- name: comp_cname
+  type: varchar(100)
+  description: 中文名稱
+  note: 主要顯示名稱
+- name: comp_ename
+  type: varchar(100)
+  description: 英文名稱
+- name: comp_dname
+  type: varchar(100)
+  description: 顯示名稱
+  note: 2014/7 原欄位保留，IT 設定資料用 增加多語系後角色調整
+- name: comp_sname
+  type: varchar(50)
+  description: 報表內部簡稱
+  note: 內部報表使用
+- name: comp_sname2
+  type: varchar(100)
+  description: 報表對外名稱
+  note: 例：Booking Form
+- name: comp_webname
+  type: varchar(100)
+  description: 網站上名稱
+  note: 前台顯示名稱
+- name: comp_address
+  type: varchar(200)
+  description: 公司地址
+- name: comp_tel
+  type: varchar(50)
+  description: 電話
+- name: comp_fax
+  type: varchar(50)
+  description: 傳真
+- name: comp_man
+  type: varchar(50)
+  description: 負責人
+- name: comp_invoice
+  type: varchar(20)
+  description: 統一編號
+  note: 原 c8，澳洲稅局 inv 要印公司註冊號故加大 size
+- name: comp_taxno
+  type: varchar(20)
+  description: 稅籍編號
+- name: comp_register
+  type: varchar(50)
+  description: 證號
+  note: 公司登記證號
+- name: comp_country
+  type: varchar(10)
+  description: 所在國家
+  note: 關聯 istbm00 國家代碼
+- name: comp_city
+  type: varchar(10)
+  description: 所在城市
+  note: 關聯 istbm00 城市代碼
+- name: comp_difftime
+  type: int
+  description: 時差
+  note: 與台北時間的時差（小時）
+- name: comp_difftime2
+  type: int
+  description: 當日時差
+  note: 與 now() 計算當地維護時間
+- name: comp_saveday
+  type: bit
+  description: 有日光節約日
+  note: 是否實施夏令時間
+- name: comp_localdate
+  type: date
+  description: 當地日期
+  note: 日處理每整點算一次含當日時差
+- name: comp_curr
+  type: varchar(3)
+  description: 使用幣別
+  note: 如 TWD, USD, AUD
+- name: comp_decimal
+  type: int
+  description: 小數位數
+  note: 金額小數位設定
+- name: comp_bu
+  type: varchar(10)
+  description: BU 代碼
+  note: Business Unit
+- name: comp_ps
+  type: varchar(10)
+  description: 薪資公司
+  note: 人事薪資歸屬公司
+- name: comp_ship
+  type: varchar(1)
+  description: 關係企業
+  note: '`M`=總公司, `B`=分公司, `C`=子公司, `R`=關係人'
+- name: comp_local
+  type: varchar(10)
+  description: 供應商代碼
+  note: 當地供應商編號
+- name: comp_agent
+  type: varchar(10)
+  description: 同行代號
+- name: comp_sts
+  type: bit
+  description: 已停業
+  note: '`1`=已停業, `0`=營運中'
+- name: comp_sts1
+  type: bit
+  description: 可出團
+  note: '`1`=可出團, `0`=不可出團'
+- name: comp_sts8
+  type: bit
+  description: 門市，公司無業務
+  note: 像忠孝、天母…方便在傳真表上加印實際所在地的公司資料
+- name: comp_sts9
+  type: bit
+  description: 限總帳(OBU)公司
+  note: 在 ERP 不出現，像 OBU 公司只出現於總帳系統
+- name: comp_order
+  type: int
+  description: 顯示順序
+  note: 下拉選單排序用
+- name: comp_logo
+  type: varchar(200)
+  description: Logo 圖檔
+  note: 圖檔路徑
+- name: comp_ar
+  type: date
+  description: 應收立帳日期
+  note: 團結轉總帳完成日期/年月
+- name: comp_ar_ym
+  type: varchar(6)
+  description: 應收立帳月
+  note: 格式：YYYYMM
+- name: comp_ar_date
+  type: date
+  description: 團訂單應收鎖帳日
+  note: 結轉團應收立帳傳票月份的月底 例：結轉 2012/8，則為 20120831 訂單立帳日 <= 20120831 則訂單不能改 此公司開始結轉時就回寫此日期，結束時回寫為 null
+- name: comp_ar_currym
+  type: varchar(6)
+  description: 應收外幣匯差月
+  note: 每月結轉應收帳款外幣餘額匯差
+- name: comp_ar_tk
+  type: date
+  description: TC 票-應收立帳日期
+  note: TC 票結轉總帳完成日期/年月
+- name: comp_ar_tkym
+  type: varchar(6)
+  description: TC 票-應收立帳月
+- name: comp_ar2
+  type: date
+  description: TC 票-應收沖帳日期
+- name: comp_ar2_ym
+  type: varchar(6)
+  description: TC 票-應收沖帳月
+- name: comp_ap
+  type: date
+  description: 應付立帳日期
+- name: comp_ap_ym
+  type: varchar(6)
+  description: 應付立帳月
+- name: comp_ap_date
+  type: date
+  description: 團支單應付鎖帳日
+  note: 結傳票月份的月底
+- name: comp_ap_currym
+  type: varchar(6)
+  description: 應付外幣匯差月
+  note: 每月結轉應付帳款外幣餘額匯差
+- name: comp_ap_tk
+  type: date
+  description: TC 票-應付立帳日期
+- name: comp_ap_tkym
+  type: varchar(6)
+  description: TC 票-應付立帳月
+- name: comp_ap2
+  type: date
+  description: TC 票-應付沖帳日期
+- name: comp_ap2_ym
+  type: varchar(6)
+  description: TC 票-應付沖帳月
+  note: 本頁以上欄位 for 自動結轉傳票所需 2006/11/1
+- name: comp_tk_date
+  type: date
+  description: TC 票-應收付鎖帳日
+  note: 結轉傳票月份的月底
+- name: comp_io_ym
+  type: varchar(6)
+  description: 代轉結轉月
+  note: 由台北執行，故只有台北有值
+- name: comp_io_ym_t
+  type: varchar(6)
+  description: 旅遊雙品牌代轉結轉月
+  note: 由台北執行，故只有台北有值
+- name: comp_io_date
+  type: date
+  description: 代轉鎖帳日
+  note: 出團公司開始印會計代轉時寫入 立帳月訖日，直到代轉月結印完清成 null
+- name: comp_io_chk
+  type: varchar(6)
+  description: 代轉核對完成月
+  note: 分公司代轉，若該分公司代轉年月已檢核完成就不能再改
+- name: comp_io_mark
+  type: varchar(50)
+  description: 代轉章
+- name: comp_acco_currym
+  type: varchar(6)
+  description: 總帳外幣匯差月
+  note: 月結轉外幣會計科目餘額匯差
+- name: comp_in_accdate
+  type: date
+  description: 收款入帳日期
+- name: comp_ot_astfn
+  type: varchar(20)
+  description: 刷卡手續費支單負責人
+  note: 日處理產生信用卡手續費支單時使用 有設定的公司才拋支單
+- name: comp_fullname
+  type: varchar(200)
+  description: 公司全名
+- name: comp_externalname
+  type: varchar(200)
+  description: 報表對外名稱
+- name: compb_comp
+  type: varchar(10)
+  description: 公司代碼（FK → iscpm00）
+- name: compb_compbar
+  type: varchar(20)
+  description: 拉 Bar 類別
