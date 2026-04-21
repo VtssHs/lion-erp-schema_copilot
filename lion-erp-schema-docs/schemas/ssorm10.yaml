@@ -1,0 +1,190 @@
+table: ssorm10
+database: LionGroupERP
+module: 訂單管理系統 (Sales Order)
+aliases:
+- 訂單明細檔
+- ssorm10
+- SSORM10
+description: 訂單明細檔。記錄訂單中每位旅客的詳細資料，包含姓名、護照、房型、費用明細等核心資訊
+columns:
+- name: orer_ordr
+  type: varchar
+  fk: ssorm00.ordr_ordr
+  description: 訂單編號
+  pk: true
+- name: orer_year
+  type: varchar
+  fk: ssorm00.ordr_year
+  description: 訂單年度
+- name: orer_seq
+  type: int
+  description: 訂單明細序號
+  note: 旅客流水號
+- name: orer_sts
+  type: bit
+  description: 已取消
+  note: 1=已取消
+- name: orer_cname
+  type: varchar
+  description: 中文姓名
+  note: 中/英文名必 key 其一
+- name: orer_ename
+  type: varchar
+  description: 英文名
+  note: First Name
+- name: orer_enamel
+  type: varchar
+  description: 英文姓
+  note: Last Name
+- name: orer_etit
+  type: varchar
+  description: 稱謂
+  note: M=大人, C=CHD 12歲以下, I=INF 2歲以下
+- name: orer_sex
+  type: varchar
+  description: 性別
+  note: M/F
+- name: orer_bdate
+  type: datetime
+  description: 出生日期
+- name: orer_country
+  type: varchar
+  description: 國籍別
+- name: orer_idno
+  type: varchar
+  description: 身份證字號
+- name: orer_visa
+  type: varchar
+  description: OP PPT收件
+  note: _=未收, Y=OP收件, X=自帶, S=送機, C=影本
+- name: orer_visa_cn
+  type: varchar
+  description: OP台胞收件
+  note: _=未收, Y=OP收件, X=自帶, S=送機
+- name: orer_draftee
+  type: bit
+  description: 役男
+  note: 是役男，已提醒客人去蓋章後再點掉
+- name: orer_ename_err
+  type: bit
+  description: 英文姓名不符規則
+  note: 空白、姓及名都低於(含)兩個字母，且字母都相同；取消 set 0
+- name: orer_room
+  type: varchar
+  description: 團體分房
+- name: orer_room_desc
+  type: varchar
+  description: 房型
+- name: orer_amark
+  type: varchar
+  description: 佔床
+  note: 1=佔床, 2=不佔, 3=加床
+- name: orer_act
+  type: varchar
+  description: 房型
+  note: '出團: local團依團價可挑, 其他固定=2'
+- name: orer_amt1
+  type: decimal
+  description: 團費
+  note: 團費已不含 Ecash
+- name: orer_amt2
+  type: decimal
+  description: 特別行程
+- name: orer_amt3
+  type: decimal
+  description: 證照
+- name: orer_amt4
+  type: decimal
+  description: 手續費機場稅
+- name: orer_amt5
+  type: decimal
+  description: 產品部成本
+- name: orer_amt6
+  type: decimal
+  description: Local團餐費
+- name: orer_amt7
+  type: decimal
+  description: Local團自費活動節目費
+- name: orer_tot_amt
+  type: decimal
+  description: 總團費(含GST 不含退佣)
+- name: orer_gst
+  type: decimal
+  description: GST稅額
+  note: 以上費用 * 訂單GST% 金額, Invoice時用
+- name: orer_ecash
+  type: decimal
+  description: 抵用Ecash金額
+- name: orer_kb1
+  type: decimal
+  description: 同業退佣金額
+  note: 原 agentcomm
+- name: orer_addgst
+  type: varchar
+  description: 加稅
+  note: A=其他券... (9=只剩舊資料)
+- name: orer_pmark
+  type: varchar
+  description: 價格
+  note: 1=團, 2=TL, 3=FOC, 4=房, 5=自由行, 6=TKT, 7=JOIN/證照, 9=雄獅
+- name: orer_pmarkdesc
+  type: varchar
+  description: ??
+  note: （欄位用途待確認）
+- name: orer_pnr0
+  type: varchar
+  description: 國際段Pnr
+  note: 每個客人最多2個PNR，勾選完上傳=TL/FOC必須馬上上傳
+- name: orer_pnr1
+  type: varchar
+  description: 中段Pnr
+  note: 因欄位不是1對多，不立即處理怕User弄錯，而造成上傳名單不對
+- name: orer_pnr_tl
+  type: bit
+  description: 上傳名單是TL
+- name: orer_pnr_foc
+  type: bit
+  description: 上傳名單是FOC
+- name: orer_tairline
+  type: varchar
+  fk_note: FK → Istbm00 (TAIRLINE)
+  description: 代訂北高
+- name: orer_tpnr
+  type: varchar
+  description: 電代
+- name: orer_tdesc
+  type: varchar
+  description: 開票備註
+- name: orer_station1
+  type: varchar
+  description: 上車地點代碼
+  note: 沒輸入時，以訂單head為主
+- name: orer_station1_desc
+  type: varchar
+  description: 特殊上車地點
+  note: 由OP輸入印到報表
+- name: orer_station2
+  type: varchar
+  description: 下車地點代碼
+- name: orer_station2_desc
+  type: varchar
+  description: 特殊下車地點
+- name: orer_off
+  type: bit
+  description: 是否脫隊
+  note: 1=脫隊
+- name: orer_nmark
+  type: varchar
+  description: 不宜參團註記
+  note: Null=無, 1=比對(ID)是, 2=模糊比對(姓名+電話)是
+- name: orer_chgname
+  type: varchar
+  description: 入名單資料異動
+- name: orer_chgnamedate
+  type: datetime
+  description: 資料異動(最後)時間
+  note: 當團體入名單日更新時，則清除本團所有這2個欄位，重新記錄
+- name: orer_max
+  type: int
+  description: INB人數
+  note: Inbound團直接輸入人數（海外ERP）

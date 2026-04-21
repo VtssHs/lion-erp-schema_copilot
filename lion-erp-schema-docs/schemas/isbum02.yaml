@@ -1,0 +1,39 @@
+table: isbum02
+database: LionGroupERP
+module: ''
+aliases:
+- bu事業體頻道審核人員
+- isbum02
+- BUM02
+- ISBUM02
+description: bu事業體頻道審核人員
+columns:
+- name: bu02_bu
+  type: varchar
+  pk: true
+  description: BU代碼
+- name: bu02_chl
+  type: varchar
+  pk: true
+  description: 頻道
+- name: bu02_line
+  type: varchar
+  pk: true
+  description: 線別
+- name: bu02_prof
+  type: varchar
+  pk: true
+  description: 單位
+- name: bu02_team
+  type: varchar
+  pk: true
+  description: 組別
+- name: bu02_msgstfn
+  type: varchar
+  description: 通知者員編
+- name: bu02_idate
+  type: datetime
+  description: 建檔系統時間
+- name: bu02_istfn
+  type: varchar
+  description: 建檔者員編
