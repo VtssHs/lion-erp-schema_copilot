@@ -1,0 +1,38 @@
+table: tptbm20
+database: LionGroupERP
+module: ''
+aliases:
+- 前台旅遊地區代碼檔
+- tptbm20
+- TPTBM20
+description: 前台旅遊地區代碼檔。多 BU 網站時，不同地區顯示不同目的地選項
+columns:
+- name: tb20_webarea
+  type: varchar(2+)
+  pk: true
+  description: 目的地代碼（英數，必須足 2 碼）
+- name: tb20_bu
+  type: varchar
+  fk: isbum00
+  description: 網站 BU
+- name: tb20_name
+  type: varchar
+  description: 名稱
+- name: tb20_type
+  type: varchar(1)
+  description: 團型
+- name: tb20_wapdkind
+  type: varchar(1)
+  description: 分類
+- name: tb20_order
+  type: int
+  description: 顯示順序
+- name: tb20_sts
+  type: int
+  description: 已作廢 (1=作廢, 0=啟用)
+- name: tb20_mstfn
+  type: varchar
+  description: 維護者及時區（單位+姓名+空格+時區）
+- name: tb20_msysdate
+  type: datetime
+  description: 維護主機時間
