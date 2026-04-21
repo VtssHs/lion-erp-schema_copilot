@@ -1,0 +1,134 @@
+table: tppdm18
+database: LionGroupERP
+module: 團體產品系統 (Group Product)
+aliases:
+- 團體預訂數量檔
+- tppdm18
+- PDM18
+- TPPDM18
+description: 團體預訂數量檔。記錄團體各類資源的預訂數量（房型、餐食、門票、行李等）
+columns:
+- name: pd18_prod
+  type: varchar
+  fk: tppdm10.prod_prod
+  description: 團號
+  pk: true
+- name: pd18_prodcomp
+  type: varchar
+  description: 團控公司
+- name: pd18_r1
+  type: int
+  description: 單人房
+  note: Single Room 數量
+- name: pd18_r2
+  type: int
+  description: 雙人房Twin
+  note: Twin Room 數量（兩張單人床）
+- name: pd18_r22
+  type: int
+  description: 雙人房Double
+  note: Double Room 數量（一張雙人床）
+- name: pd18_r3
+  type: int
+  description: 三人房
+  note: Triple Room 數量
+- name: pd18_r4
+  type: int
+  description: 四人房
+  note: Quad Room 數量
+- name: pd18_r9
+  type: int
+  description: 司機房
+  note: Driver Room 數量
+- name: pd18_rfoc
+  type: int
+  description: FOC 房
+  note: Free of Charge 房間數量
+- name: pd18_ma
+  type: int
+  description: 旅館含早 A
+  note: 大人早餐數量
+- name: pd18_mc
+  type: int
+  description: 旅館含早 C
+  note: 小孩早餐數量
+- name: pd18_mi
+  type: int
+  description: 旅館含早 I
+  note: 嬰兒早餐數量
+- name: pd18_mfoc
+  type: int
+  description: 旅館含早 FOC
+  note: FOC 早餐數量
+- name: pd18_a
+  type: int
+  description: A
+  note: 大人餐食數量
+- name: pd18_c
+  type: int
+  description: C
+  note: 小孩餐食數量
+- name: pd18_i
+  type: int
+  description: 嬰兒
+  note: 嬰兒餐食數量
+- name: pd18_foc
+  type: int
+  description: FOC
+  note: FOC 餐食數量
+- name: pd18_lg
+  type: int
+  description: GL
+  note: Local Guide 餐食數量
+- name: pd18_tl
+  type: int
+  description: TL
+  note: Tour Leader 餐食數量
+- name: pd18_ta
+  type: int
+  description: A
+  note: 大人門票數量
+- name: pd18_tc
+  type: int
+  description: C
+  note: 小孩門票數量
+- name: pd18_ti
+  type: int
+  description: 嬰兒
+  note: 嬰兒門票數量
+- name: pd18_tfoc
+  type: int
+  description: FOC
+  note: FOC 門票數量
+- name: pd18_to
+  type: int
+  description: 老人
+  note: 老人門票數量
+- name: pd18_ts
+  type: int
+  description: 學生
+  note: 學生門票數量
+- name: pd18_tlg
+  type: int
+  description: LG
+  note: Local Guide 門票數量
+- name: pd18_ttl
+  type: int
+  description: TL
+  note: Tour Leader 門票數量
+- name: pd18_bag
+  type: int
+  description: 旅館行李
+  note: 行李件數（可能是旅館寄存或運送）
+- name: pd18_mstfn
+  type: varchar
+  description: 維護者單位姓名時區
+  note: '單位+姓名+空格+時區 (如: 直團王大明 TW)'
+- name: pd18_mdate
+  type: datetime
+  description: 維護日當地時間
+  note: 維護者所在時區的時間
+- name: pd18_msysdate
+  type: datetime
+  description: 維護日主機時間
+  note: 系統主機的時間戳記

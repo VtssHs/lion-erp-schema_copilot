@@ -1,0 +1,49 @@
+table: tppdm36
+database: LionGroupERP
+module: 團體產品管理 (TPPDM)
+aliases:
+- 團體上下車地點關聯檔
+- tppdm36
+- PDM36
+- TPPDM36
+description: 團體上下車地點關聯檔。定義每個出發團的上下車集合地點設定；各團若未設定，則退而使用行程層級的 tppdm26 設定
+columns:
+- name: pd36_prod
+  type: varchar
+  fk: tppdm10.prod_prod
+  description: 團號
+  note: ；各團若未設定上車地點，就抓行程層級（tppdm26）的設定
+- name: pd36_prodcomp
+  type: varchar
+  pk: true
+  description: 團控公司
+- name: pd36_station
+  type: varchar
+  fk: optbm20.tb20_station
+  description: 集合地點代碼
+- name: pd36_time
+  type: varchar
+  description: 集合時間
+  note: 格式如：07:00、08:30
+- name: pd36_station1
+  type: varchar
+  fk: optbm20.tb20_station
+  description: 上車地點代碼
+- name: pd36_time1
+  type: varchar
+  description: 上車時間
+  note: 格式如：07:15、08:45
+- name: pd36_notshow
+  type: bit
+  description: 前台不顯示
+  note: 0=顯示，1=不顯示
+- name: pd36_mstfn
+  type: varchar
+  description: 維護者姓名及時區
+  note: 格式：單位+姓名+空格+時區，例：`直團王大明 TW`
+- name: pd36_mdate
+  type: datetime
+  description: 當地維護時間
+- name: pd36_msysdate
+  type: datetime
+  description: 主機時間

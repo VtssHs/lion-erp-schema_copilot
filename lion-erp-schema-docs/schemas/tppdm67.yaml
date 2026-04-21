@@ -1,0 +1,76 @@
+table: tppdm67
+database: LionGroupERP
+module: 團體產品管理 (TPPDM) — 郵輪子系統
+aliases:
+- 團體郵輪設定
+- tppdm67
+- PDM67
+- TPPDM67
+description: 團體郵輪設定。記錄每個出發團的郵輪銷售設定，包含指定船隻、航期、艙等、艙房，以及線上選房、加購截止天數、鐵道路線等進階控制參數
+columns:
+- name: pd67_prod
+  type: varchar
+  fk: tppdm10.prod_prod
+  description: 團號
+- name: pd67_prodcomp
+  type: varchar
+  pk: true
+  description: 團控公司
+- name: pd67_cruiseno
+  type: varchar
+  description: 指定銷售 - 船
+- name: pd67_sailing
+  type: varchar
+  description: 指定銷售 - 航期
+- name: pd67_cabinid
+  type: varchar
+  description: 指定銷售 - 艙等
+- name: pd67_crs20idno
+  type: varchar
+  description: 指定銷售 - 艙房明細
+- name: pd67_liveqty
+  type: int
+  description: 指定銷售 - 可入住人數
+- name: pd67_onlinebooking
+  type: varchar/bit
+  description: 指定銷售 - 開放線上選房（前台）
+- name: pd67_onlinebooking1
+  type: varchar/bit
+  description: 指定銷售 - 開放線上選房（後台）
+- name: pd67_pakagtno
+  type: varchar
+  description: 指定郵輪 PAK 中心
+- name: pd67_identify
+  type: varchar
+  description: 郵輪識別碼
+- name: pd67_lastAddDayNum
+  type: int
+  description: 最晚加購天數（非獨包）
+  note: 含出發當天，最大值 999
+- name: pd67_AddTabManagement
+  type: varchar/bit
+  description: 是否管理自選頁簽
+  note: 0=否，1=顯示/管理
+- name: pd67_themedays
+  type: int
+  description: 主題鎖定天數（前台）
+  note: 出發前 N 天鎖定
+- name: pd67_themedays1
+  type: int
+  description: 主題鎖定天數（後台）
+  note: 出發前 N 天鎖定
+- name: pd67_rtno
+  type: varchar
+  fk: tppdm72.pd72_rtno
+  description: 鐵道路線代碼
+- name: pd67_isenable
+  type: bit
+  description: 是否啟動 RPA
+  note: 2024/06 新增
+- name: pd67_mstfn
+  type: varchar
+  description: 維護者姓名
+  note: 格式：單位+姓名
+- name: pd67_msysdate
+  type: datetime
+  description: 維護時間

@@ -1,0 +1,41 @@
+table: tppdm93
+database: LionGroupERP
+module: 團體產品管理 (TPPDM)
+aliases:
+- 多渠道自動上架設定
+- tppdm93
+- PDM93
+- TPPDM93
+description: 多渠道自動上架設定。定義「產品 BU × 團單位」對應「渠道 BU × 渠道」的自動上架規則，當新團建立時自動套用分銷設定，不需逐團手動設定
+columns:
+- name: pd93_chlbu
+  type: varchar
+  fk: isbum00.bu00_bu
+  description: 渠道 BU
+- name: pd93_chl
+  type: varchar
+  fk: isbum01.bu01_channel
+  description: 渠道
+- name: pd93_prodbu
+  type: varchar
+  fk: isbum00.bu00_bu
+  description: 產品 BU
+- name: pd93_prodprof
+  type: varchar
+  pk: true
+  description: 團單位
+- name: pd93_chltype
+  type: varchar
+  description: 自動上架設定值
+- name: pd93_istfn
+  type: varchar
+  description: 建檔人
+- name: pd93_idate
+  type: datetime
+  description: 建檔日期
+- name: pd93_mstfn
+  type: varchar
+  description: 維護人
+- name: pd93_mdate
+  type: datetime
+  description: 維護日

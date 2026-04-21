@@ -1,0 +1,35 @@
+table: tppdm19a
+database: LionGroupERP
+module: 團體產品系統 (Group Product) - 說明會相關
+aliases:
+- 團體滿意度調查統計副檔
+- 說明會相關
+- tppdm19a
+- PDM19A
+- TPPDM19A
+description: 團體滿意度調查統計副檔。記錄團體滿意度調查的統計分類資料（職業、報名方式、參團來源等）
+columns:
+- name: p19a_prod
+  type: varchar
+  pk: true
+  fk: tppdm10.prod_prod
+  description: 團號
+  note: (part)
+- name: p19a_prodcomp
+  type: varchar
+  description: 團控公司
+- name: p19a_type
+  type: varchar
+  pk: true
+  fk_note: FK → ISTBM00 (TPPD19_代碼)
+  description: 統計類別
+  note: (part), , 1=職業, 2=報名方式, 3=參團來源, 4=再參團原因, 5=下次旅遊時間, 6=下次旅遊地點, 7=訂購雜誌類別
+- name: p19a_kind
+  type: varchar
+  pk: true
+  description: 統計次類別
+  note: (part), 各統計類別下的細分項目
+- name: p19a_man
+  type: int
+  description: 累計人數
+  note: 此類別/次類別的人數統計

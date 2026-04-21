@@ -1,0 +1,38 @@
+table: tppdm15
+database: LionGroupERP
+module: 團體產品管理 (TPPDM)
+aliases:
+- 團體活動節目關聯檔
+- tppdm15
+- PDM15
+- TPPDM15
+description: 團體活動節目關聯檔。記錄每個出發團所關聯的自費活動節目，一個團可對應多個活動節目，透過序號區分
+columns:
+- name: pd15_prod
+  type: varchar
+  fk: tppdm10.prod_prod
+  description: 團號
+- name: pd15_prodcomp
+  type: varchar
+  pk: true
+  description: 團控公司
+- name: pd15_seq
+  type: int
+  description: 序號
+  note: 不可重複
+- name: pd15_option
+  type: varchar
+  fk: optnm00
+  description: 活動節目
+  note: （活動節目主檔）
+- name: pd15_mstfn
+  type: varchar
+  description: 增修者單位姓名時區
+  note: 格式：單位+姓名+空格+時區，例：`直團王大明 TW`
+- name: pd15_mdate
+  type: datetime
+  description: 當地增修日期
+- name: pd15_msysdate
+  type: datetime
+  description: 主機增修時間
+  note: 不顯示，備查用

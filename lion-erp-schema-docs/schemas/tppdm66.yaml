@@ -1,0 +1,43 @@
+table: tppdm66
+database: LionGroupERP
+module: 團體產品管理 (TPPDM) — 郵輪子系統
+aliases:
+- 郵輪相關檔案
+- 岸上觀光訂單關聯
+- tppdm66
+- PDM66
+- TPPDM66
+description: 郵輪相關檔案（岸上觀光訂單關聯）。記錄郵輪岸上觀光車次與訂單旅客的關聯，將訂單明細（ordr + year + seq）掛載到特定岸上觀光車次
+columns:
+- name: pd66_localtour
+  type: varchar
+  fk: tppdm62.pd62_localtour
+  description: 岸上觀光編號
+  pk: true
+- name: pd66_date
+  type: datetime
+  fk: tppdm64.pd64_date
+  description: 岸上觀光日期
+- name: pd66_bus
+  type: varchar
+  fk: tppdm64.pd64_bus
+  description: 車次
+- name: pd66_ordr
+  type: varchar
+  fk: ssorm00.ordr_ordr
+  description: 訂單號
+- name: pd66_year
+  type: varchar
+  fk: ssorm00.ordr_year
+  description: 訂單年
+- name: pd66_seq
+  type: int
+  fk: ssorm10.orer_seq
+  description: 訂單序號
+- name: pd66_mstfn
+  type: varchar
+  description: 維護者姓名及時區
+  note: 格式：單位+姓名+空格+時區，例：`直團王大明 TW`
+- name: pd66_msysdate
+  type: datetime
+  description: 當地維護時間

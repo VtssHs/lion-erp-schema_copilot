@@ -1,0 +1,74 @@
+table: tppdm55
+database: LionGroupERP
+module: 團體產品系統 (Group Product)
+aliases:
+- 交付 B2P 供應商處理團
+- tppdm55
+- PDM55
+- TPPDM55
+description: 交付 B2P 供應商處理團。團體交由 B2P 供應商處理的訂團記錄與確認狀態
+columns:
+- name: pd55_prod
+  type: varchar(10)
+  fk: tppdm10.prod_prod
+  description: 團號
+  pk: true
+- name: pd55_prodcomp
+  type: varchar(2)
+  description: 團控公司
+- name: pd55_local
+  type: nvarchar(12)
+  fk: B2P供應商主檔
+  description: 供應商代碼
+  note: 型態配合B2P系統
+- name: pd55_bkk
+  type: datetime
+  description: 訂團日期
+  note: 首次訂團時間
+- name: pd55_bkstfn
+  type: varchar(20)
+  fk_note: 只存第一次設定者，FK → 員工主檔
+  description: 訂團者員編
+  note: 只存第一次設定者
+- name: pd55_lcount
+  type: int
+  description: 訂團次數
+  note: 追蹤修改訂單的次數
+- name: pd55_bkdesc
+  type: nvarchar(500)
+  description: (給供應商的)說明
+  note: 供應商已確認後取消訂團時必須寫說明
+- name: pd55_bkconman
+  type: nvarchar(50)
+  description: 訂購聯絡人
+- name: pd55_bkcontel
+  type: varchar(20)
+  description: 訂購聯絡電話
+- name: pd55_ldate
+  type: datetime
+  description: 供應商確認時間
+  note: 供應商登入系統確認訂單的時間
+- name: pd55_lid
+  type: varchar(20)
+  description: 供應商確認帳號
+  note: 供應商登入帳號，用於留言功能
+- name: pd55_lname
+  type: nvarchar(20)
+  description: 供應商確認人
+  note: 供應商確認人員姓名
+- name: pd55_ltel
+  type: varchar(20)
+  description: 領隊電話
+  note: 提供給供應商的領隊聯絡電話
+- name: pd55_lteltotal
+  type: int
+  description: 使用量
+  note: 領隊電話號碼的使用次數統計
+- name: pd55_mstfn
+  type: varchar(20)
+  description: 維護者姓名
+  note: '例如: "王大明"'
+- name: pd55_mdate
+  type: datetime
+  description: 維護時間
+  note: 最後修改時間

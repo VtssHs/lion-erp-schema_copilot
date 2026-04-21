@@ -1,0 +1,112 @@
+table: wtorm30
+database: LionGroupERP
+module: 網位單管理系統 (Web Transaction Order) - 訂房子系統
+aliases:
+- 訂房記錄檔
+- 網位單管理系統
+- 訂房子系統
+- 記錄訂位單的每日訂房明細
+- 為訂房訂單的核心明細檔
+- wtorm30
+- ORM30
+- WTORM30
+description: 訂房記錄檔。記錄訂位單的每日訂房明細，每筆對應一個住宿日期的一種房型，為訂房訂單的核心明細檔
+columns:
+- name: wor30_wtordr
+  type: varchar
+  fk: wtorm00.Wor00_wtordr
+  description: 訂位單流水號
+- name: wor30_wtyear
+  type: varchar
+  fk: wtorm00.Wor00_wtyear
+  description: 訂位單年碼
+- name: wor30_seq
+  type: varchar
+  description: 房型代碼
+  note: ; 人工單/電話單存「序號+空白」
+- name: wor30_date
+  type: datetime
+  pk: true
+  description: 住宿日期
+- name: wor30_roomdesc
+  type: varchar
+  description: 房型說明
+- name: wor30_amtkind
+  type: varchar
+  description: 房價類別
+- name: wor30_orderseq
+  type: int
+  fk: DBA
+  description: 商品明細紀錄流水號
+  note: -ERP2/Hotel:HTORM31.orderseq
+- name: wor30_hor31descseq
+  type: int
+  fk: HTORM31.HOR31_DESC
+  description: 詳細說明對應序
+  note: ；同房型同入住區間的「詳」只記第一筆，需透過此欄取得正確資料
+- name: wor30_act
+  type: int
+  description: 住房人數
+- name: wor30_roomact
+  type: int
+  description: 入住人數（大人人數）
+- name: wor30_childqty
+  type: int
+  description: 小孩人數
+- name: wor30_child1age
+  type: int
+  description: 第一位小孩歲數
+- name: wor30_child2age
+  type: int
+  description: 第二位小孩歲數
+- name: wor30_child3age
+  type: int
+  description: 第三位小孩歲數
+- name: wor30_qty
+  type: int
+  description: 訂房數量
+- name: wor30_amt
+  type: decimal
+  description: 房價
+- name: wor30_amt_base
+  type: decimal
+  description: 基本售價
+  note: 不包含加人加價之價格
+- name: wor30_amt2
+  type: decimal
+  description: 服務費
+  note: 旅館國家=TW 時：房價 × 0.1
+- name: wor30_b2b_amt
+  type: decimal
+  description: 批售價
+  note: 通路公司成本
+- name: wor30_b2c_amt
+  type: decimal
+  description: 直客價
+- name: wor30_cost
+  type: decimal
+  description: 成本價格
+- name: wor30_cost_base
+  type: decimal
+  description: 基本成本
+  note: 不包含加人加價之成本
+- name: wor30_discount
+  type: decimal
+  fk: ophtm70
+  description: 活動折扣
+- name: wor30_local_discount
+  type: decimal
+  description: 供應商折扣
+- name: wor30_curr
+  type: varchar
+  description: 幣別
+- name: wor30_sale_curr
+  type: varchar
+  description: 銷售幣別
+- name: wor30_confirm
+  type: varchar
+  description: 保證住房
+- name: wor30_save
+  type: varchar
+  description: 保留房
+  note: 2006/05/19 啟用

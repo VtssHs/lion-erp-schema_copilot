@@ -1,0 +1,29 @@
+table: tppcm20
+database: LionGroupERP
+module: 團體估價系統
+aliases:
+- 估價明細檔
+- tppcm20
+- PCM20
+- TPPCM20
+description: 估價明細檔。儲存估價單的明細資料，用於計算 `tppcm30` 團分攤成本
+columns:
+- name: tp20_tpform
+  type: unknown
+  fk_note: FK → `tppcm00.tp00_tpform`
+  description: 估價代號
+  note: '`tppcm00.tp00_tpform`'
+- name: tp20_ncost
+  type: unknown
+  description: 估價幣別成本。畫面 show 這欄
+  note: 已換算為估價幣別
+- name: tp20_cost
+  type: unknown
+  description: 成本。★要估算 `tppcm30` 團分攤成本，已換算成估價幣別的金額
+  note: 用於檔次成本計算
+- name: tp20_profit
+  type: unknown
+  description: 毛利 %
+- name: tp20_seat
+  type: unknown
+  description: 車型（座位數）

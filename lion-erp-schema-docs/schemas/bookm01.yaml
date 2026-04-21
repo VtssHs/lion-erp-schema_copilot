@@ -1,0 +1,60 @@
+table: bookm01
+database: LionGroupERP
+module: 預訂系統 (Booking)
+aliases:
+- 預訂明細
+- 預訂系統
+- bookm01
+- OKM01
+- BOOKM01
+description: 預訂明細。預訂的明細項目（房型、餐別、活動項目等細項）
+columns:
+- name: bk01_bookno
+  type: varchar
+  fk: bookm00.bk00_bookno
+  description: 預定序號
+  note: '**PK1**'
+- name: bk01_seq
+  type: int
+  description: 序號
+  note: '**PK2**, 明細流水號'
+- name: bk01_cto
+  type: varchar(2)
+  description: 類別
+  note: H=房, M1=早餐, M3=午餐, M5=晚餐, V=活動, B=車, T=其他
+- name: bk01_item
+  type: nvarchar
+  description: 預訂明細
+- name: bk01_description
+  type: nvarchar
+  description: 預訂項目
+  note: 記錄旅館內booking餐的資料
+- name: bk01_fdate
+  type: date
+  description: 日期
+- name: bk01_days
+  type: decimal
+  description: 使用天/時
+- name: bk01_qty
+  type: int
+  description: 數量
+- name: bk01_act
+  type: varchar
+  description: 計算單位
+  note: '例如: 間、人、車、天'
+- name: bk01_amt
+  type: decimal
+  description: 單價
+- name: bk01_meatstyle
+  type: varchar
+  fk: optbm30
+  description: 餐標
+  note: 記錄旅館內booking餐的資料
+- name: bk01_foc
+  type: int
+  description: FOC
+  note: Free of Charge 免費數量
+- name: bk01_freepst
+  type: bit
+  description: 免PST稅
+  note: 打勾金額累計到免PST稅金額；沒打勾則累計到未稅金額

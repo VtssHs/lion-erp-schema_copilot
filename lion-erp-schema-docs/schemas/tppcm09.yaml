@@ -1,0 +1,22 @@
+table: tppcm09
+database: LionGroupERP
+module: 團體估價系統
+aliases:
+- 估價幣別匯率檔
+- tppcm09
+- PCM09
+- TPPCM09
+description: 估價幣別匯率檔。儲存估價單使用的各幣別匯率設定
+columns:
+- name: tp09_tpform
+  type: unknown
+  fk_note: FK → `tppcm00.tp00_tpform`
+  description: 估價代號
+  note: '`tppcm00.tp00_tpform`'
+- name: tp09_curr
+  type: unknown
+  description: 幣別
+  note: （與 tp09_tpform 組成複合鍵）
+- name: tp09_erat
+  type: unknown
+  description: 換算匯率
