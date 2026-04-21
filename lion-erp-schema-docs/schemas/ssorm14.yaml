@@ -1,0 +1,49 @@
+table: ssorm14
+database: LionGroupERP
+module: 訂單管理系統 (Sales Order)
+aliases:
+- 商務部旅客機票航段資料
+- 哩程等明細
+- ssorm14
+- ORM14
+- SSORM14
+description: 商務部旅客機票航段資料。記錄商務部機票的詳細航段資訊，補充 ssorm13 的航班資料，提供每個航段的機場、日期、哩程等明細
+columns:
+- name: or14_ordr
+  type: varchar
+  fk: ssorm13.or13_ordr
+  description: 訂單編號
+  pk: true
+- name: or14_year
+  type: varchar
+  fk: ssorm13.or13_year
+  description: 訂單年度
+  note: 用結團為產銷可修改權限的切點
+- name: or14_seq
+  type: int
+  fk: ssorm13.or13_seq
+  description: 序號
+- name: or14_segment
+  type: int
+  description: 航段編號
+  note: 航段流水號（1, 2, 3...）
+- name: or14_fairport
+  type: varchar
+  description: 出發機場
+  note: 機場代碼（如：TPE, HKG, NRT）
+- name: or14_fdate
+  type: datetime
+  description: 出發日期
+  note: 該航段出發時間
+- name: or14_tairport
+  type: varchar
+  description: 目的機場
+  note: 機場代碼
+- name: or14_tdate
+  type: datetime
+  description: 抵達日期
+  note: 該航段抵達時間
+- name: or14_mileage
+  type: int
+  description: 哩程數
+  note: 該航段的飛行哩程
