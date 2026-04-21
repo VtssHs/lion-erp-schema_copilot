@@ -1,0 +1,85 @@
+table: tppdm50
+database: LionGroupERP
+module: 團體產品系統 (Group Product)
+aliases:
+- 出團旅館檔
+- tppdm50
+- PDM50
+- TPPDM50
+description: 出團旅館檔。記錄團體行程中每日住宿旅館的詳細資料
+columns:
+- name: pd50_prod
+  type: varchar
+  pk: true
+  fk: tppdm10.prod_prod
+  description: 團號
+  note: (part)
+- name: pd50_prodcomp
+  type: varchar
+  description: 團控公司
+- name: pd50_seq
+  type: int
+  pk: true
+  description: 序號
+  note: (part), 用於區分同一團的多筆旅館記錄
+- name: pd50_sts
+  type: varchar/char
+  description: 確認狀況
+  note: 旅館訂房確認狀態
+- name: pd50_date
+  type: date
+  description: 日期
+  note: 入住日期
+- name: pd50_hotel
+  type: varchar
+  fk_note: FK → 旅館主檔 (ophtm*)
+  description: 旅館代號
+  note: '*)'
+- name: pd50_lvl
+  type: varchar
+  description: 等級(艙等)
+  note: 主要 for 自由行參考，但未結合價格 (2003/01/07)
+- name: pd50_max
+  type: int
+  description: 人數
+  note: 入住人數
+- name: pd50_room
+  type: int
+  description: 房數
+  note: 訂房數量
+- name: pd50_price
+  type: decimal
+  description: 報價金額
+  note: 旅館報價
+- name: pd50_curr
+  type: varchar
+  description: 報價幣別
+  note: 幣別代碼 (如 USD, TWD)
+- name: pd50_unit
+  type: char(1)
+  description: 報價單位
+  note: '**R**=房, **P**=人'
+- name: pd50_hotel_idno
+  type: varchar
+  description: 自採房使用序號
+  note: 關聯自採房系統的識別碼
+- name: pd50_audit
+  type: char(1)
+  description: 審核狀態
+  note: 空白=不需審核(預設), 1=待審核, 2=審核中, 3=退件, 9=審核通過
+- name: pd50_desc
+  type: varchar/text
+  description: 備註
+  note: '房型及數量說明 (如: 15 Twin + 1 Double), 旅館名稱=備註(尚未確認)'
+- name: pd50_mstfn
+  type: varchar
+  description: 維護者姓名及時區
+  note: '單位+姓名+空格+時區 (如: 直團王大明 TW), 只要 save 一筆'
+- name: pd50_mdate
+  type: datetime
+  description: 當地維護時間
+  note: 維護者所在時區的時間
+- name: pd50_msysdate
+  type: datetime
+  description: 主機時間
+  note: 系統主機的時間戳記

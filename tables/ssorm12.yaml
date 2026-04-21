@@ -1,0 +1,127 @@
+table: ssorm12
+database: LionGroupERP
+module: 訂單管理系統 (Sales Order)
+aliases:
+- 訂單明細副檔
+- ssorm12
+- ORM12
+- SSORM12
+description: 訂單明細副檔。記錄訂單旅客的補充資料，包含企業團專屬欄位、保險資訊、歐洲簽證資料、台胞證加簽、配偶資料等擴充欄位
+columns:
+- name: or12_ordr
+  type: varchar
+  fk: ssorm00.ordr_ordr
+  description: 訂單編號
+  pk: true
+- name: or12_year
+  type: varchar
+  fk: ssorm00.ordr_year
+  description: 訂單年度
+  note: ；For 簽證表格使用
+- name: or12_seq
+  type: int
+  fk: ssorm10.orer_seq
+  description: 訂單明細序號
+- name: or12_comp
+  type: varchar
+  description: 公司名稱
+- name: or12_comp2
+  type: varchar
+  description: 分公司名稱
+- name: or12_caddr
+  type: varchar
+  description: 公司地址
+- name: or12_ecaddr
+  type: varchar
+  description: 公司英文地址
+- name: or12_dept
+  type: varchar
+  description: 部門名稱
+- name: or12_title
+  type: varchar
+  description: 職稱
+- name: or12_jdate
+  type: datetime
+  description: 到職日期
+- name: or12_salary
+  type: decimal
+  description: 年收入
+- name: or12_bID
+  type: varchar
+  description: 受益人 idno
+- name: or12_bname
+  type: varchar
+  description: 受益人姓名
+- name: or12_bplace
+  type: varchar
+  description: 出生地
+  note: For 歐洲簽證用
+- name: or12_brelman
+  type: varchar
+  description: 受益人與被保險人關係
+  note: '台壽: 1=本人 2=配偶 3=子女 4=父母 5=其他 6=兄弟姐妹 7=法定'
+- name: or12_eaddr
+  type: varchar
+  description: 住家英文地址
+- name: or12_father_ename
+  type: varchar
+  description: 父親英文姓名
+- name: or12_mother_ename
+  type: varchar
+  description: 母親英文姓名
+- name: or12_spouse_ename
+  type: varchar
+  description: 配偶英文名
+  note: First Name
+- name: or12_spouse_ename1
+  type: varchar
+  description: 配偶英文姓
+  note: Last Name
+- name: or12_spouse_bdate
+  type: datetime
+  description: 配偶出生日期
+- name: or12_spouse_bplace
+  type: varchar
+  description: 配偶出生地
+- name: or12_visa2_cn
+  type: varchar
+  description: 台胞加簽號碼
+- name: or12_date2_cn
+  type: datetime
+  description: 台胞加簽日期
+- name: or12_safeamt1
+  type: decimal
+  description: 投保死殘金額
+  note: 060208 國泰保險上傳資料
+- name: or12_safeamt2
+  type: decimal
+  description: 投保醫療金額
+- name: or12_safeamt3
+  type: decimal
+  description: 投保疾病金額
+- name: or12_carr
+  type: varchar
+  description: 航班
+  note: 主要企業團用，記錄每位旅客特別規格；名稱只是用來識別
+- name: or12_ship
+  type: varchar
+  description: 船班
+- name: or12_bus
+  type: varchar
+  description: 車號
+  note: 只要該團統一即可；使用多團旅客資料表印出內容
+- name: or12_room
+  type: varchar
+  description: 分房
+- name: or12_desc
+  type: varchar
+  description: 特殊需求
+- name: or12_color
+  type: varchar
+  description: 行李牌顏色
+- name: or12_hat
+  type: varchar
+  description: 帽子顏色
+- name: or12_size
+  type: varchar
+  description: 服裝大小

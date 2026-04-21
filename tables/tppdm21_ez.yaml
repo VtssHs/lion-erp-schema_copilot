@@ -1,0 +1,36 @@
+table: tppdm21_ez
+database: LionGroupERP
+module: 團體產品管理 (TPPDM) — 易遊子系統
+aliases:
+- 易遊團體日行程檔
+- 易遊子系統
+- 易遊系統的日行程明細
+- tppdm21_ez
+- PDM21_EZ
+- TPPDM21_EZ
+description: 易遊團體日行程檔。易遊（EZ）系統的日行程明細，對應 tppdm21 的易遊版本，記錄易遊行程的每日內容
+columns:
+- name: ez21_tur2
+  type: varchar
+  fk: tppdm20_ez.ez20_tur2
+  description: 行程代號
+  pk: true
+- name: ez21_num
+  type: int
+  description: 流水號
+  note: 行程內日次序號
+- name: ez21_day
+  type: int
+  description: 天數
+  note: 第幾天
+- name: ez21_name
+  type: nvarchar
+  description: 行程點簡介
+  note: 該日行程重點名稱
+- name: ez21_desc
+  type: nvarchar
+  description: 行程說明
+  note: 該日完整行程描述
+- name: ez21_msysdate
+  type: datetime
+  description: 異動時間

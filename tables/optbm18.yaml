@@ -1,0 +1,57 @@
+table: optbm18
+database: LionGroupERP
+module: 景點與旅遊地點管理 (OPTBM)
+aliases:
+- 城市區域檔
+- 景點與旅遊地點管理
+- 元件的城市區域分類主檔
+- optbm18
+- TBM18
+- OPTBM18
+description: 城市區域檔。CTO 元件的城市區域分類主檔，用於城市區域的三階結構管理（國家-城市-區域）
+columns:
+- name: ct18_country
+  type: varchar
+  description: 所在國代碼
+  note: '**PK1**'
+  pk: true
+- name: ct18_city
+  type: varchar
+  description: 城市代碼
+  note: '**PK2**'
+- name: ct18_cityzone
+  type: varchar
+  description: 區域代碼
+  note: '**PK3**'
+- name: ct18_name
+  type: varchar
+  description: 名稱
+  note: 區域的正式名稱
+- name: ct18_dname
+  type: varchar
+  description: 顯示名稱
+  note: 前台或系統顯示用的名稱
+- name: ct18_desc
+  type: varchar
+  description: 分區描述
+  note: 區域的詳細說明
+- name: ct18_cto
+  type: varchar
+  description: CTO 基準區域
+  note: 該區域在 CTO 系統中的基準分類
+- name: ct18_show
+  type: bit
+  description: 有元件資料的城市區域
+  note: 由國家的「設定 CTO 元件國家」功能做設定
+- name: ct18_weborder
+  type: int
+  description: 網上顯示順序
+  note: 255 = 不在 search 下拉 bar 上顯示
+- name: ct18_proorder
+  type: int
+  description: 達人館順序
+  note: 不知何用（待確認）
+- name: ct18_pro_pic
+  type: varchar
+  description: 達人館的區圖片
+  note: 區域代表圖片路徑

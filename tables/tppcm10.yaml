@@ -1,0 +1,74 @@
+table: tppcm10
+database: LionGroupERP
+module: 團體估價系統
+aliases:
+- 估價明細成本檔
+- tppcm10
+- PCM10
+- TPPCM10
+description: 估價明細成本檔。儲存估價單中各成本項目的明細資料（機票、餐食、旅館、購物等）
+columns:
+- name: tp10_tpform
+  type: unknown
+  fk_note: FK → `tppcm00.tp00_tpform`
+  description: 估價代號。除車成本外的所有成本
+  note: '`tppcm00.tp00_tpform`'
+- name: tp10_no
+  type: unknown
+  description: 流水號
+  note: （與 tp10_tpform 組成複合鍵）
+- name: tp10_order
+  type: unknown
+  description: 順序
+- name: tp10_tpcost
+  type: unknown
+  description: 項目。機票及各項雜費 `istbm00(TPCOST)`，其他則固定字樣
+  note: '行程: `WAY/V/SHOP/M/H/BAG/OPTION`（行李費同 HOTEL）'
+- name: tp10_ctokey
+  type: unknown
+  description: 元件代碼。有時才 join 各元件檔
+- name: tp10_day
+  type: unknown
+  description: 日數。機票區塊日數及順序統一為 0，以 `istbm00` 的順序排
+- name: tp10_meat
+  type: unknown
+  description: 餐別。1-早 2-午 3-晚
+- name: tp10_curr
+  type: unknown
+  description: 幣別
+- name: tp10_ncost
+  type: unknown
+  description: 未稅成本。機票區塊則一律存此，稅、退佣=0 做計算
+- name: tp10_rate
+  type: unknown
+  description: 稅 %（加值型營業稅）。成本 = 未稅成本 × (100+稅–退佣) × (100+毛利) / 10000
+- name: tp10_comm
+  type: unknown
+  description: 成本退佣 %
+- name: tp10_profit
+  type: unknown
+  description: 毛利 %
+- name: tp10_cost
+  type: unknown
+  description: 成本。估價用 - 依上列計算後 畫面存檔時，計算寫回（幣別同上）估價時要換算匯率
+- name: tp10_foc
+  type: unknown
+  description: 有 Foc。只有機票非全攤的項目才可勾
+- name: tp10_spec_git
+  type: unknown
+  description: 特殊檔次。有 Foc 時才可有特殊的檔次；HOTEL 以房為單位
+- name: tp10_spec_foc
+  type: unknown
+  description: 特殊檔次 Foc。元件塊：有特殊檔次 Foc > 0 then 有 Foc = 1, Foc 成本 = 0
+- name: tp10_ncost_foc
+  type: unknown
+  description: 未稅 Foc 成本
+- name: tp10_cost_foc
+  type: unknown
+  description: Foc 成本。有勾 Foc 才 save 這個欄位
+- name: tp10_myself
+  type: unknown
+  description: 自費。自費時，不計算成本；成本、Foc 成本 = 0
+- name: tp10_desc
+  type: unknown
+  description: 備註

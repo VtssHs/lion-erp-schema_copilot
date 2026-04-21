@@ -1,0 +1,19 @@
+table: tppdm63
+database: LionGroupERP
+module: 團體產品管理 (TPPDM) — 郵輪子系統
+aliases:
+- 郵輪岸上觀光景點
+- tppdm63
+- PDM63
+- TPPDM63
+description: 郵輪岸上觀光景點。記錄郵輪岸上觀光行程的景點關聯，每筆岸上觀光（tppdm62）可對應多個景點
+columns:
+- name: pd63_localtour
+  type: varchar
+  description: 編號
+  note: 關聯 tppdm62 的岸上觀光代碼
+- name: pd63_view
+  type: varchar
+  fk: opvim00
+  description: 景點
+  note: （景點主檔）

@@ -1,0 +1,120 @@
+table: tppdm40
+database: LionGroupERP
+module: TPPDM - 團體產品管理
+aliases:
+- 團體班機資料
+- tppdm40
+- PDM40
+- TPPDM40
+description: 團體班機資料。區分去程/回程/中段航班
+columns:
+- name: pd40_prod
+  type: varchar(20)
+  nullable: false
+  pk: true
+  description: 團號
+- name: pd40_prodcomp
+  type: varchar(2)
+  nullable: false
+  pk: true
+  description: 團控公司
+- name: pd40_seq
+  type: int
+  nullable: false
+  description: 序號
+  note: 航段序號
+- name: pd40_air
+  type: varchar(10)
+  nullable: true
+  description: 班機
+  note: 航空公司代碼 + 班機號碼
+- name: pd40_fairport
+  type: varchar(10)
+  nullable: true
+  fk: optbm11
+  description: 起飛機場
+- name: pd40_fdate
+  type: datetime
+  nullable: true
+  description: 起飛日期
+  note: 起飛日期（當地時區）
+- name: pd40_ftime
+  type: varchar(5)
+  nullable: true
+  description: 起飛時間
+  note: '格式: HH:MM'
+- name: pd40_tairport
+  type: varchar(10)
+  nullable: true
+  fk: optbm11
+  description: 抵達機場
+- name: pd40_tdate
+  type: datetime
+  nullable: true
+  description: 抵達日期
+  note: 抵達日期（當地時區），可能跨日
+- name: pd40_ttime
+  type: varchar(5)
+  nullable: true
+  description: 抵達時間
+  note: '格式: HH:MM'
+- name: pd40_flytime
+  type: varchar(10)
+  nullable: true
+  description: 飛行時間
+  note: 飛行時長，2023/05 新增
+- name: pd40_max
+  type: int
+  nullable: true
+  description: 機位
+  note: 基本配額機位數
+- name: pd40_min
+  type: int
+  nullable: true
+  description: 追加機位
+  note: 追加配額機位數
+- name: pd40_tkt
+  type: char(1)
+  nullable: true
+  description: 湊票
+  note: 1=去, 9=回, O=中段, X=湊票不含此段
+- name: pd40_mid
+  type: char(1)
+  nullable: true
+  description: 中段 (開票名單不印)
+  note: 標記中段航班是否印在開票名單
+- name: pd40_sel
+  type: varchar(50)
+  nullable: true
+  description: 出團單位航段
+  note: 出團單位使用的航段
+- name: pd40_sel2
+  type: varchar(50)
+  nullable: true
+  description: 非出團單位航段
+  note: 非出團單位使用的航段
+- name: pd40_pnr
+  type: varchar(20)
+  nullable: true
+  description: PNR電代 (等2251後再刪)
+  note: 訂位代碼，與 tppdm41 無關聯
+- name: pd40_desc
+  type: text
+  nullable: true
+  description: 備註
+  note: 航班備註說明
+- name: pd40_mdate
+  type: datetime
+  nullable: true
+  description: 當地維護時間
+  note: 當地時區的維護時間
+- name: pd40_mstfn
+  type: varchar(50)
+  nullable: true
+  description: 維護者姓名及時區
+  note: '格式: "單位+姓名+空格+時區"'
+- name: pd40_msysdate
+  type: datetime
+  nullable: true
+  description: 主機時間
+  note: 系統主機時間

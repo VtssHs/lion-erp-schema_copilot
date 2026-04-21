@@ -1,0 +1,77 @@
+table: tptrm32
+database: LionGroupERP
+module: ''
+aliases:
+- 旅遊館群組行程
+- tptrm32
+- TRM32
+- TPTRM32
+description: 旅遊館群組行程。前台顯示促銷標籤，吸引點擊
+columns:
+- name: tr32_travel
+  type: varchar
+  pk: true
+  fk: tptrm30
+  description: 旅遊館代號
+  note: (part 1)
+- name: tr32_group
+  type: varchar
+  pk: true
+  fk: tptrm30
+  description: 旅遊館群組代號
+  note: (part 2)
+- name: tr32_seq
+  type: int
+  pk: true
+  description: 序號
+  note: (part 3)
+- name: tr32_name
+  type: varchar(36)
+  fk: tptbm00
+  description: 標準團名 (GUID)
+- name: tr32_tur2
+  type: varchar
+  description: 行程代號
+- name: tr32_order
+  type: int
+  description: 順序
+- name: tr32_fdate
+  type: date
+  description: 出團起日
+- name: tr32_tdate
+  type: date
+  description: 出團迄日
+- name: tr32_pdhot
+  type: varchar
+  fk_note: FK → istbm00 (PDHOT)
+  description: 搶購字樣
+- name: tr32_amt_b2c
+  type: decimal
+  description: B2C 最低直客價
+- name: tr32_amt_b2bc
+  type: decimal
+  description: B2BC 最低直售價
+- name: tr32_amt_b2b
+  type: decimal
+  description: B2B 最低批售價
+- name: tr32_d8_b2c
+  type: varchar
+  description: B2C 最近 3 團出發日期
+- name: tr32_d8_b2bc
+  type: varchar
+  description: B2BC 出團日期
+- name: tr32_d8_b2b
+  type: varchar
+  description: B2B 出團日期
+- name: tr32_fbu
+  type: varchar
+  description: 產品來源
+- name: tr32_mstfn2
+  type: varchar
+  description: 產品維護者及時區（單位+姓名+空格+時區）
+- name: tr32_msysdate2
+  type: datetime
+  description: 產品主機維護時間
+- name: tr32_mdate2
+  type: datetime
+  description: 產品維護當地時間（依 tptrm30 負責單位時區）

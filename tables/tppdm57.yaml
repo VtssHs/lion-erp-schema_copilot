@@ -1,0 +1,33 @@
+table: tppdm57
+database: LionGroupERP
+module: 團體產品系統 (Group Product)
+aliases:
+- 團詳細設定欄位
+- tppdm57
+- PDM57
+- TPPDM57
+description: 團詳細設定欄位。團體層級的詳細欄位設定值，覆蓋供應商層級的預設設定（tppdm56）
+columns:
+- name: pd57_prod
+  type: varchar(10)
+  fk: tppdm10.prod_prod
+  description: 團號
+  note: '**PK1**'
+  pk: true
+- name: pd57_prodcomp
+  type: varchar(2)
+  description: 團控公司
+- name: pd57_local
+  type: nvarchar(12)
+  fk_note: '**PK2**, FK → 供應商主檔'
+  description: 供應商代碼
+  note: '**PK2**'
+- name: pd57_coltype
+  type: varchar(50)
+  fk_note: '**PK3**, FK → 欄位代碼主檔'
+  description: 欄位代碼
+  note: '**PK3**'
+- name: pd57_colval
+  type: nvarchar(500)
+  description: 欄位值
+  note: 實際填寫的資料內容

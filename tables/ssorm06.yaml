@@ -1,0 +1,71 @@
+table: ssorm06
+database: LionGroupERP
+module: 訂單管理系統 (Sales Order)
+aliases:
+- 訂單保險資料副檔
+- 航班資訊與投保明細
+- ssorm06
+- ORM06
+- SSORM06
+description: 訂單保險資料副檔。記錄訂單的旅遊保險資料，包含國泰保險上傳資料、保單號碼、航班資訊與投保明細
+columns:
+- name: or06_ordr
+  type: varchar
+  fk: ssorm00.ordr_ordr
+  description: 訂單編號
+  pk: true
+- name: or06_year
+  type: varchar
+  fk: ssorm00.ordr_year
+  description: 訂單年度
+- name: or06_safeno
+  type: varchar
+  description: 保險證號
+  note: 保單號碼
+- name: or06_safeseq
+  type: varchar
+  description: 保險收件序號
+- name: or06_SafeInsComp
+  type: varchar
+  description: 投保對象代碼
+  note: 保險公司代碼
+- name: or06_safecode
+  type: varchar
+  description: 承辦單位
+- name: or06_safefair
+  type: varchar
+  description: 出發航班
+  note: 國泰保險上傳資料
+- name: or06_safetair
+  type: varchar
+  description: 回程航班
+- name: or06_days
+  type: int
+  description: 投保天數
+- name: or06_safedate
+  type: datetime
+  description: 保險起時
+  note: 保險生效時間
+- name: or06_safemode
+  type: varchar
+  description: 交通工具
+  note: 如：飛機、火車、遊輪
+- name: or06_saferate
+  type: decimal
+  description: 費率
+- name: or06_safepay
+  type: varchar
+  description: 送金單號
+  note: 保險費用繳納單號
+- name: '1'
+  type: varchar/bit
+  description: 保單列印及下載
+  note: 申請單號：19122268
+- name: or06_mstfn
+  type: varchar
+  description: 增修人
+  note: 2011後都沒有 update 本欄
+- name: or06_mdate
+  type: datetime
+  description: 增修時間
+  note: 2011後都沒有 update 本欄

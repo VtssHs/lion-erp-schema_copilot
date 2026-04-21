@@ -1,0 +1,44 @@
+table: tppdm22
+database: LionGroupERP
+module: 團體產品系統 (Group Product)
+aliases:
+- 自由行行程檔
+- tppdm22
+- PDM22
+- TPPDM22
+description: 自由行行程檔。自由行產品的行程細節（與團體行程結構不同）
+columns:
+- name: pd22_tur2
+  type: varchar(20)
+  fk: tppdm20.pd20_tur2
+  description: 行程代號
+  note: '**PK1**, , 複製不copy本檔'
+  pk: true
+- name: pd22_num
+  type: int
+  description: 流水號
+  note: '**PK2**, 每個行程內的序號'
+- name: pd22_seq
+  type: int
+  description: 序號
+  note: '**PK3**, 使用者自編的流水號（如第4種）'
+- name: pd22_unit
+  type: varchar(20)
+  description: 資料單位
+  note: 內容類別或區分用
+- name: pd22_chgline
+  type: bit
+  description: 內容換行
+  note: 控制顯示格式
+- name: pd22_desc
+  type: nvarchar(max)
+  description: 內容說明
+  note: 自由行行程詳細描述
+- name: pd22_hotel
+  type: nvarchar(500)
+  description: 旅館簡介
+  note: 住宿資訊
+- name: pd22_meat
+  type: nvarchar(500)
+  description: 餐食簡介
+  note: 用餐資訊
