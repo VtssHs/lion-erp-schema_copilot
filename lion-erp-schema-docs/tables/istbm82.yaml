@@ -1,0 +1,44 @@
+table: istbm82
+database: LionGroupERP
+module: ''
+aliases:
+- 公用標籤群組檔
+- istbm82
+- TBM82
+- ISTBM82
+description: 公用標籤群組檔
+columns:
+- name: tb82_no
+  type: varchar
+  pk: true
+  description: 群組代碼
+- name: tb82_issingle
+  type: int
+  description: 群組是否為單選 (1=單選, 0=多選)
+- name: tb82_typecode
+  type: varchar
+  description: 所屬種類代碼
+- name: tb82_categorycode
+  type: varchar
+  description: 標籤類別代碼
+- name: tb82_triptypecode
+  type: varchar
+  description: 旅遊形式代碼
+- name: tb82_sts
+  type: int
+  description: 標籤狀態 (1=作廢, 0=啟用)
+- name: tb82_expsdate
+  type: date
+  description: 有效起始日 (排程更新標籤狀態)
+- name: tb82_expedate
+  type: date
+  description: 有效結束日 (排程更新標籤狀態)
+- name: tb82_sort
+  type: int
+  description: 排序
+- name: tb82_mstfn
+  type: varchar
+  description: 維護者
+- name: tb82_mdate
+  type: datetime
+  description: 維護時間

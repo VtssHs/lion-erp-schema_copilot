@@ -1,0 +1,55 @@
+table: istbm20
+database: LionGroupERP
+module: ''
+aliases:
+- 地區代碼檔
+- istbm20
+- ISTBM20
+description: 地區代碼檔
+columns:
+- name: area_area
+  type: varchar
+  pk: true
+  description: 地區代號
+  note: (Part 1)
+- name: area_darea
+  type: varchar
+  pk: true
+  description: 細地區代號
+  note: (Part 2)
+- name: area_line
+  type: varchar
+  description: 線別
+- name: area_dline
+  type: varchar
+  description: 副線別
+- name: area_dname
+  type: varchar
+  description: 中文名稱
+- name: area_prod
+  type: varchar(2)
+  description: 團號2碼
+- name: area_fbacode
+  type: varchar
+  description: 富邦旅遊地區代碼
+- name: area_fbaname
+  type: varchar
+  description: 富邦旅遊地區中文
+- name: area_ordr_gst2
+  type: varchar
+  description: 國外同業GST稅率
+- name: area_sts
+  type: int
+  description: 已作廢 (1=作廢, 0=啟用)
+- name: area_desc
+  type: text
+  description: 說明
+- name: area_desc2
+  type: text
+  description: 備註 (作廢必填)
+- name: area_mstfn
+  type: varchar
+  description: 維護者姓名 (單位+姓名)
+- name: area_msysdate
+  type: datetime
+  description: 維護當地時間

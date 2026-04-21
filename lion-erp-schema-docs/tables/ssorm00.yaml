@@ -1,0 +1,170 @@
+table: ssorm00
+database: LionGroupERP
+module: 訂單管理系統 (Sales Order)
+aliases:
+- 訂單主檔
+- 團體旅遊正式訂單主檔
+- ssorm00
+- SSORM00
+description: 訂單主檔。團體旅遊正式訂單主檔
+columns:
+- name: ordr_ordr
+  type: varchar
+  pk: true
+  description: 訂單號
+- name: ordr_year
+  type: varchar
+  description: 訂單年度
+- name: ordr_bu
+  type: varchar
+  description: BU (事業體)
+- name: ordr_code
+  type: varchar
+  description: 環境碼
+- name: ordr_exordr
+  type: varchar
+  description: 外部訂單
+  note: 外部系統訂單編號（新增 2025/02/26）
+- name: ordr_wtordr
+  type: varchar
+  description: 關聯訂單流水號
+  note: 關聯到其他訂單
+- name: ordr_wtyear
+  type: varchar
+  description: 關聯訂單年
+- name: ordr_wtbu
+  type: varchar
+  description: 關聯訂單BU
+  note: 新增 2025/02/26
+- name: ordr_wtcode
+  type: varchar
+  description: 關聯訂單環境碼
+  note: 新增 2025/02/26
+- name: ordr_wtsts
+  type: varchar
+  description: 關聯訂單來源或去處
+  note: 0=團, 8=FIT 開TC票訂單
+- name: ordr_prod
+  type: varchar
+  fk: tppdm10.prod_prod
+  description: 團號
+- name: ordr_line
+  type: varchar
+  description: 線別
+- name: ordr_area
+  type: varchar
+  description: 地區
+- name: ordr_name
+  type: varchar
+  description: 團名
+- name: ordr_days
+  type: int
+  description: 天數
+- name: ordr_adt
+  type: int
+  description: 大人人數
+- name: ordr_chd
+  type: int
+  description: 小孩人數
+- name: ordr_inf
+  type: int
+  description: 嬰兒人數
+- name: ordr_tkt
+  type: int
+  description: 湊票人數 (不含Inf)
+  note: 僅計算需票券的旅客
+- name: ordr_tl
+  type: int
+  description: 領隊人數
+- name: ordr_visa
+  type: int
+  description: 收件人數
+  note: 目前含收件/自帶/送機
+- name: ordr_amt
+  type: decimal
+  description: 訂單總金額
+- name: ordr_tot_amt
+  type: decimal
+  description: 不含退佣總團費(票務總售價)
+  note: 實際收款金額
+- name: ordr_pay
+  type: decimal
+  description: 訂金
+- name: ordr_balance
+  type: decimal
+  description: 尾款
+- name: ordr_discount
+  type: decimal
+  description: 折扣金額
+- name: ordr_cust
+  type: varchar
+  fk: customer
+  description: 客戶代號
+- name: ordr_custname
+  type: varchar
+  description: 客戶名稱
+- name: ordr_custtel
+  type: varchar
+  description: 客戶電話
+- name: ordr_custemail
+  type: varchar
+  description: 客戶Email
+- name: ordr_sales
+  type: varchar
+  fk_note: FK → opagm20 (員工主檔)
+  description: 業務代號
+- name: ordr_agent
+  type: varchar
+  fk_note: FK → opagm00 (法人資料主檔)
+  description: 法人代號
+- name: ordr_agentname
+  type: varchar
+  description: 法人名稱
+- name: ordr_webcode
+  type: varchar
+  description: 網站來源
+  note: 空白=非網上下單, B2C, B2E, B2B(z000), W007...
+- name: ordr_source
+  type: varchar
+  description: 訂單來源
+  note: 如：官網、門市、電話、APP
+- name: ordr_channel
+  type: varchar
+  description: 銷售通路
+- name: ordr_sts
+  type: varchar
+  description: 訂單狀態
+  note: N=新訂單, C=確認, X=取消, F=完成
+- name: ordr_cancel
+  type: bit
+  description: 是否取消
+  note: 1=已取消
+- name: ordr_canceldate
+  type: datetime
+  description: 取消日期
+- name: ordr_cancelreason
+  type: varchar
+  description: 取消原因
+- name: ordr_paytype
+  type: varchar
+  description: 付款方式
+  note: C=信用卡, T=匯款, S=現金
+- name: ordr_paydate
+  type: datetime
+  description: 付款日期
+- name: ordr_paysts
+  type: varchar
+  description: 付款狀態
+  note: P=部分付款, F=全額付款, N=未付款
+- name: ordr_cdate
+  type: datetime
+  description: 建立日期
+- name: ordr_cuser
+  type: varchar
+  description: 建立人員
+- name: ordr_mdate
+  type: datetime
+  description: 修改日期
+- name: ordr_muser
+  type: varchar
+  description: 修改人員
