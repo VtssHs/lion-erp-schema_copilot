@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+
+# 本地暫存（若有人手癢跑 extract_from_legacy）
+_tmp/
+*.bak
