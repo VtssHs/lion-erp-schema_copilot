@@ -1,0 +1,51 @@
+table: tptrm20
+database: LionGroupERP
+module: ''
+aliases:
+- 旅遊館
+- tptrm20
+- TRM20
+- TPTRM20
+description: 旅遊館。- 多國營運時區分不同市場的旅遊館
+columns:
+- name: tr20_travel
+  type: varchar
+  pk: true
+  description: 旅遊館代號
+- name: tr20_name
+  type: varchar
+  description: 旅遊館名稱
+- name: tr20_country
+  type: varchar
+  description: 雄獅國家
+- name: tr20_prod
+  type: varchar(1)
+  description: 產品別
+- name: tr20_freekind
+  type: varchar
+  fk_note: FK → istbm00 (FREEKIND)
+  description: 自由行類別
+- name: tr20_carr
+  type: varchar
+  description: 自由行航空公司（多個以分號分隔）
+- name: tr20_order
+  type: int
+  description: 順序
+- name: tr20_hide
+  type: int
+  description: 搜尋引擎不顯示
+- name: tr20_html
+  type: datetime
+  description: 產生網頁時間
+- name: tr20_sts
+  type: int
+  description: 已停用 (1=停用, 0=啟用)
+- name: tr20_mstfn
+  type: varchar
+  description: 維護者及時區（單位+姓名+空格+時區）
+- name: tr20_msysdate
+  type: datetime
+  description: 維護主機時間
+- name: tr20_mdate
+  type: datetime
+  description: 當地維護時間

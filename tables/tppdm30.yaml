@@ -1,0 +1,35 @@
+table: tppdm30
+database: LionGroupERP
+module: ''
+aliases:
+- 團體產品行程異動記錄檔
+- tppdm30
+- PDM30
+- TPPDM30
+description: 團體產品行程異動記錄檔。記錄團體產品行程的異動狀態與備註
+columns:
+- name: pd30_prod
+  type: varchar(12)
+  nullable: false
+  fk: tppdm10.tpdm10_geno
+  description: 團號
+- name: pd30_prodcomp
+  type: varchar(2)
+  nullable: false
+  description: 團號公司
+  note: 雄獅/易遊識別碼
+- name: pd30_chg_sts
+  type: varchar(10)
+  nullable: false
+  description: 異動狀態
+  note: 代碼待確認（tptbm/tptrm）
+- name: pd30_chg_d8
+  type: varchar(8)
+  nullable: true
+  description: 異動出團日
+  note: YYYYMMDD 格式
+- name: pd30_desc
+  type: varchar(500)
+  nullable: true
+  description: 異動備註
+  note: 自由文字說明

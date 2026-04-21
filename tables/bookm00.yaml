@@ -1,1 +1,178 @@
-
+table: bookm00
+database: LionGroupERP
+module: 預訂系統 (Booking)
+aliases:
+- 預訂主檔
+- 預訂系統
+- bookm00
+- OKM00
+- BOOKM00
+description: 預訂主檔。OP 對供應商的預訂記錄（旅館、餐廳、車輛、景點、商店等）
+columns:
+- name: bk00_bookno
+  type: varchar
+  description: 預訂序號
+  note: 'isnom00(book, 系統年度)，編碼方式: 2碼系統年+6碼流水序號'
+  pk: true
+- name: bk00_prod
+  type: varchar
+  fk: tppdm10.prod_prod
+  description: 團號
+- name: bk00_prodcomp
+  type: varchar
+  description: 控團公司
+- name: bk00_prof
+  type: varchar
+  description: 單位
+- name: bk00_cto
+  type: char(1)
+  description: 類別
+  note: h=旅館, m=餐, b=車, v=景點活動, s=商店
+- name: bk00_cto2
+  type: char(1)
+  description: 類別2
+  note: '餐廳時用: 1=早, 3=午餐, 5=晚餐'
+- name: bk00_ctokey
+  type: varchar
+  fk_note: FK → 各類別主檔 (ophtm/opmtm/opbsm/opvim/opspm)
+  description: 元件代碼
+- name: bk00_local
+  type: varchar
+  fk: opagm10
+  description: 供應商
+- name: bk00_invoice
+  type: varchar
+  description: (供應商請款的)invoice編號
+- name: bk00_fdate
+  type: date
+  description: 使用起日
+  note: 只有旅館及車會有起訖日期
+- name: bk00_tdate
+  type: date
+  description: 使用訖日
+- name: bk00_days
+  type: int
+  description: 使用日數
+  note: 旅館=訖-起日(隔天退房)，車=訖-起日+1天(頭尾都要用車)
+- name: bk00_curr
+  type: varchar
+  description: 幣別
+- name: bk00_amt
+  type: decimal
+  description: 預訂未稅總金額
+- name: bk00_gst
+  type: decimal
+  description: GST稅金
+- name: bk00_gst_rate
+  type: decimal
+  description: GST稅率
+- name: bk00_pst
+  type: decimal
+  description: PST稅金
+- name: bk00_pst_rate
+  type: decimal
+  description: PST稅率
+- name: bk00_amt2
+  type: decimal
+  description: 免PST稅金額
+  note: 統一都要GST稅
+- name: bk00_tax
+  type: bit
+  description: 金額已內含稅
+  note: 雪梨成本均內含GST，為總計需反推未稅及各項金額
+- name: bk00_tot_amt
+  type: decimal
+  description: 含稅總金額
+- name: bk00_amt3
+  type: decimal
+  description: 訂金
+- name: bk00_amt3_ot
+  type: bit
+  description: 已產生訂金支單
+  note: 0=未產生, 1=已產生
+- name: bk00_paymode
+  type: char(1)
+  description: 付款方式
+  note: '$=現金, #=支票, b=銀存轉帳, c=信用卡, v=voucher'
+- name: bk00_chkno
+  type: varchar
+  description: 支票號碼
+  note: 主要由支單付款時回寫，用於budget表
+- name: bk00_payfor
+  type: varchar
+  fk: iscpm11
+  description: 信用卡付款人
+  note: 信用卡時用
+- name: bk00_compcard
+  type: varchar
+  description: 公司信用卡代號
+- name: bk00_bkdate
+  type: datetime
+  description: 預定時間
+- name: bk00_cfdate
+  type: datetime
+  description: 確認時間
+- name: bk00_cfno
+  type: varchar
+  description: 確認代號
+- name: bk00_flow
+  type: char(1)
+  description: 處理狀況
+  note: 空白=輸入, b=bk:已預定, c=cf:已確認, f=支:已產生支單
+- name: bk00_sts
+  type: bit
+  description: 已作廢
+- name: bk00_sts1
+  type: bit
+  description: 預定後異動
+- name: bk00_description
+  type: nvarchar
+  description: 預訂項目
+- name: bk00_desc
+  type: nvarchar
+  description: 預定備註
+- name: bk00_desc2
+  type: nvarchar
+  description: 旅客姓名
+- name: bk00_bus_carr
+  type: varchar
+  fk: optbm70
+  description: 車型代碼
+- name: bk00_driver
+  type: varchar
+  description: 司機名
+- name: bk00_driver_tel
+  type: varchar
+  description: 司機電話
+- name: bk00_meatstyle
+  type: varchar
+  fk: optbm30
+  description: 餐標代碼
+- name: bk00_amt_b
+  type: bit
+  description: booking form 印成本
+  note: 0=不列印, 1=要列印
+- name: bk00_amt_v
+  type: bit
+  description: voucher 印成本
+  note: 0=不列印, 1=要列印
+- name: bk00_year
+  type: int
+  description: FIT訂單年
+- name: bk00_ordr
+  type: varchar
+  description: FIT訂單編號
+- name: bk00_mstfn
+  type: varchar
+  description: 維護者姓名
+  note: 單位+姓名+空格+時區 ex:資訊王大明 TW
+- name: bk00_mdate
+  type: datetime
+  description: 當地維護時間
+- name: bk00_20mstfn
+  type: varchar
+  description: 行程日期資料維護者姓名
+  note: 單位+姓名+空格+時區 ex:資訊王大明 TW
+- name: bk00_20mdate
+  type: datetime
+  description: 行程日期資料當地維護時間

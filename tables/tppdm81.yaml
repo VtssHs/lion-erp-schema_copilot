@@ -1,0 +1,37 @@
+table: tppdm81
+database: LionGroupERP
+module: 團體產品管理 (TPPDM)
+aliases:
+- 設定滑雪團各級教練人數
+- tppdm81
+- PDM81
+- TPPDM81
+description: 設定滑雪團各級教練人數。設定滑雪團各類別（類別）各等級（等級）所需的教練人數上限
+columns:
+- name: pd81_prod
+  type: varchar
+  fk: tppdm10.prod_prod
+  description: 團號
+- name: pd81_prodcomp
+  type: varchar
+  pk: true
+  description: 團號公司
+- name: pd81_kind
+  type: varchar
+  description: 類別
+  note: 教練類別
+- name: pd81_level
+  type: varchar
+  description: 等級
+  note: 滑雪等級
+- name: pd81_max
+  type: int
+  description: 人數
+  note: 該類別+等級的教練人數上限
+- name: pd81_mstfn
+  type: varchar
+  description: 維護者姓名
+  note: 格式：單位+姓名，只存第一筆
+- name: pd81_mdate
+  type: datetime
+  description: 維護時間

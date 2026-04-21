@@ -1,0 +1,68 @@
+table: tppdm41
+database: LionGroupERP
+module: 團體產品系統 (Group Product)
+aliases:
+- 團體 PNR 資料
+- tppdm41
+- PDM41
+- TPPDM41
+description: 團體 PNR 資料。記錄團體訂位記錄 (PNR - Passenger Name Record) 的詳細資料
+columns:
+- name: pd41_prod
+  type: varchar
+  pk: true
+  fk: tppdm10.prod_prod
+  description: 團號
+  note: (part)
+- name: pd41_prodcomp
+  type: varchar
+  description: 團控公司
+- name: pd41_pnr
+  type: varchar
+  pk: true
+  description: PNR
+  note: (part?), Passenger Name Record 訂位代號
+- name: pd41_carr
+  type: varchar
+  description: 航空公司
+  note: 航空公司代碼 (如 CI, BR, CX)
+- name: pd41_mid
+  type: bit
+  description: 中段
+  note: '**1**=是中段, 0 或 NULL=非中段'
+- name: pd41_max
+  type: int
+  description: 本團機位
+  note: 此 PNR 配置給本團的機位數
+- name: pd41_nmax
+  type: int
+  description: 名單人數
+  note: 已挑選進名單的人數
+- name: pd41_ndate
+  type: datetime
+  description: 挑名單時間
+  note: 名單挑選的時間戳記
+- name: pd41_nstfn
+  type: varchar
+  description: 挑名單者姓名
+  note: '如: 王大明'
+- name: pd41_update
+  type: datetime
+  description: 上傳名單時間
+  note: 名單上傳至航空公司系統的時間
+- name: pd41_desc
+  type: varchar/text
+  description: 備註
+  note: PNR 相關備註或特殊說明
+- name: pd41_mstfn
+  type: varchar
+  description: 維護者姓名及時區
+  note: 'Pdrc02_pnr 才 save，單位+姓名+空格+時區 (如: 直團王大明 TW)'
+- name: pd41_mdate
+  type: datetime
+  description: 當地維護時間
+  note: 維護者所在時區的時間
+- name: pd41_msysdate
+  type: datetime
+  description: 主機時間
+  note: 系統主機的時間戳記

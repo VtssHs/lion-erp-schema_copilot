@@ -1,0 +1,24 @@
+table: isbum01
+database: LionGroupERP
+module: ''
+aliases:
+- bu事業體頻道
+- isbum01
+- BUM01
+- ISBUM01
+description: bu事業體頻道
+columns:
+- name: bu01_bu
+  type: varchar
+  pk: true
+  description: BU代碼
+- name: bu01_chl
+  type: varchar
+  pk: true
+  description: 頻道
+- name: bu01_idate
+  type: datetime
+  description: 建檔系統時間
+- name: bu01_istfn
+  type: varchar
+  description: 建檔者員編

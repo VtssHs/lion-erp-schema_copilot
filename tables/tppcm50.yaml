@@ -1,0 +1,51 @@
+table: tppcm50
+database: LionGroupERP
+module: 團體估價系統
+aliases:
+- 估價單附件檔案管理表
+- tppcm50
+- PCM50
+- TPPCM50
+description: 估價單附件檔案管理表。儲存估價單相關的附件檔案資訊（行程 PDF、成本試算表、報價單等）
+columns:
+- name: tp50_tpform
+  type: unknown
+  fk_note: FK → `tppcm00.tp00_tpform`
+  description: 估價代號
+  note: '`tppcm00.tp00_tpform`'
+- name: tp50_no
+  type: unknown
+  description: 序號
+  note: 同一估價單的多個附件依序編號
+- name: tp50_name
+  type: unknown
+  description: 文件內容
+  note: 檔案說明或標題
+- name: tp50_file
+  type: unknown
+  description: '文件目錄檔名/網址。目錄: `\html2\tour` 檔名: `tppc_出發訖日年碼_估價單號_序號.附檔名` Ex: `tppc_14_1305100001_1.xls'
+  note: 實體檔案路徑或 URL
+- name: tp50_date
+  type: unknown
+  description: 上傳時間
+  note: 檔案首次上傳時間
+- name: tp50_stfn
+  type: unknown
+  description: 上傳者員編
+  note: 上傳人員工代碼
+- name: tp50_stfnname
+  type: unknown
+  description: '上傳者單位+姓名。ex: 資訊王大明'
+  note: 上傳人員單位與姓名
+- name: tp50_mdate
+  type: unknown
+  description: 增修當地時間
+  note: 最後修改時間
+- name: tp50_mstfn
+  type: unknown
+  description: 增修者單位姓名時區。單位+姓名+空格+時區 ex:直團王大明 TW
+  note: 最後修改人員資訊
+- name: tp50_sts
+  type: unknown
+  description: 已作廢
+  note: 1-已作廢，空白或 0-有效
