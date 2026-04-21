@@ -1,0 +1,70 @@
+table: tppdm64
+database: LionGroupERP
+module: 團體產品管理 (TPPDM) — 郵輪子系統
+aliases:
+- 郵輪岸上觀光車次
+- tppdm64
+- PDM64
+- TPPDM64
+description: 郵輪岸上觀光車次。記錄郵輪岸上觀光的每個車次（班次）資料，包含日期、座位、領隊、司機、用餐等出團執行資訊
+columns:
+- name: pd64_localtour
+  type: varchar
+  fk: tppdm62.pd62_localtour
+  description: 編號
+- name: pd64_date
+  type: datetime
+  pk: true
+  description: 日期
+- name: pd64_bus
+  type: varchar
+  pk: true
+  description: 車次
+- name: pd64_sts
+  type: bit/int
+  description: 已停售
+- name: pd64_seat
+  type: int
+  description: 座位數
+- name: pd64_ac
+  type: int
+  description: 加購人數
+  note: 國內郵輪＝大人+小孩+INF；國外郵輪＝大人+小孩
+- name: pd64_infseat
+  type: bit/int
+  description: 嬰兒佔位
+  note: 預設值=0（不佔位）
+- name: pd64_place
+  type: varchar
+  description: 集合地點
+- name: pd64_time
+  type: varchar
+  description: 集合時間
+- name: pd64_meal
+  type: varchar
+  description: 用餐餐廳
+- name: pd64_meal_time
+  type: varchar
+  description: 用餐時間
+- name: pd64_tl
+  type: varchar
+  description: 領隊
+- name: pd64_dr_cname
+  type: varchar
+  description: 司機
+- name: pd64_dr_mtel
+  type: varchar
+  description: 司機手機
+- name: pd64_car_licence
+  type: varchar
+  description: 車牌號碼
+- name: pd64_busCode
+  type: varchar
+  description: 標籤
+- name: pd64_mstfn
+  type: varchar
+  description: 維護者姓名及時區
+  note: 格式：單位+姓名+空格+時區，例：`資訊王大明 TW`；此資料未存當地時間，目前只用於台灣故無異常
+- name: pd64_msysdate
+  type: datetime
+  description: 維護主機時間
