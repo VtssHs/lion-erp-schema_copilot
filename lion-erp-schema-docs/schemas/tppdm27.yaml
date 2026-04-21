@@ -1,0 +1,38 @@
+table: tppdm27
+database: LionGroupERP
+module: 團體產品系統 (Group Product)
+aliases:
+- 團體行程修改自動留言檔
+- tppdm27
+- PDM27
+- TPPDM27
+description: 團體行程修改自動留言檔。記錄行程修改時的自動通知留言（異動追蹤與通知機制）
+columns:
+- name: pd27_tur2
+  type: varchar(20)
+  fk: tppdm20.pd20_tur2
+  description: 行程代號
+- name: pd27_tur22
+  type: varchar(20)
+  description: 行程代號
+  note: 用途待確認（可能為修改前/後行程代號）
+- name: pd27_desc
+  type: nvarchar(max)
+  description: 通知備註說明
+  note: 自動產生的異動說明
+- name: pd27_stfn
+  type: varchar(20)
+  description: 通知者員編
+  note: 觸發異動的員工編號
+- name: pd27_mstfn
+  type: varchar(50)
+  description: 維護者姓名及時區
+  note: 單位+姓名+空格+時區 ex:直團王大明 TW
+- name: pd27_mdate
+  type: datetime
+  description: 當地維護時間
+  note: 維護者當地時間
+- name: pd27_msysdate
+  type: datetime
+  description: 主機時間
+  note: 系統伺服器時間，異動發生時間
