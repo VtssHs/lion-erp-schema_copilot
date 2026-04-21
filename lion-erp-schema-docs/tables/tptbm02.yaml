@@ -1,0 +1,48 @@
+table: tptbm02
+database: LionGroupERP
+module: ''
+aliases:
+- 標準團名關鍵字檔
+- tptbm02
+- TBM02
+- TPTBM02
+description: 標準團名關鍵字檔
+columns:
+- name: tbm2_line
+  type: varchar
+  pk: true
+  fk: istbm10
+  description: 線別
+  note: (part 1)
+- name: tbm2_dline
+  type: varchar
+  pk: true
+  description: 副線別
+  note: (part 2)
+- name: tbm2_area
+  type: varchar
+  pk: true
+  description: 地區
+  note: (part 3)
+- name: tbm2_darea
+  type: varchar
+  pk: true
+  description: 細地區
+  note: (part 4)
+- name: tbm2_keyword
+  type: varchar
+  pk: true
+  description: 關鍵字
+  note: (part 5)
+- name: tbm2_sameword
+  type: text
+  description: 相似字（逗號分隔）
+- name: tbm2_mstfn
+  type: varchar
+  description: 維護者及時區（單位+姓名+空格+時區）
+- name: tbm2_msysdate
+  type: datetime
+  description: 維護主機時間
+- name: tbm2_mdate
+  type: datetime
+  description: 當地維護時間
