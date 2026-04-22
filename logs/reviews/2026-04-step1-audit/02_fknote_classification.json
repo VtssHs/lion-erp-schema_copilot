@@ -1,0 +1,493 @@
+{
+  "buckets": {
+    "C_EXTERNAL": [
+      {
+        "table": "bookm00",
+        "column": "bk00_ctokey",
+        "raw": "FK → 各類別主檔 (ophtm/opmtm/opbsm/opvim/opspm)",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm16",
+        "column": "pd16_vscountry1",
+        "raw": "FK → 國家代碼表",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm16",
+        "column": "pd16_vsseq1",
+        "raw": "FK → 簽證類型表",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm16",
+        "column": "pd16_vscountry2",
+        "raw": "FK → 國家代碼表",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm16",
+        "column": "pd16_vsseq2",
+        "raw": "FK → 簽證類型表",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm16",
+        "column": "pd16_safecode",
+        "raw": "FK → 保險承辦單位代碼表",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm16",
+        "column": "pd16_safemode",
+        "raw": "FK → 交通工具代碼表",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm16",
+        "column": "pd16_SafeInsComp",
+        "raw": "FK → 保險公司代碼表",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm20",
+        "column": "pd20_prodname",
+        "raw": "FK → 標準團名檔，有值時行程名稱=NULL",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm24",
+        "column": "pd24_ctokey",
+        "raw": "FK → 對應的主檔（景點/餐廳/旅館/商店）",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm50",
+        "column": "pd50_hotel",
+        "raw": "FK → 旅館主檔 (ophtm*)",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm55",
+        "column": "pd55_bkstfn",
+        "raw": "只存第一次設定者，FK → 員工主檔",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm56",
+        "column": "pd56_local",
+        "raw": "**PK1**, FK → 供應商主檔，配合 B2P 系統型態",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm56",
+        "column": "pd56_code",
+        "raw": "FK → 欄位代碼主檔",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm57",
+        "column": "pd57_local",
+        "raw": "**PK2**, FK → 供應商主檔",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm57",
+        "column": "pd57_coltype",
+        "raw": "**PK3**, FK → 欄位代碼主檔",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm76",
+        "column": "pd76_line",
+        "raw": "FK → 線別代碼表，例如：歐洲線、美洲線",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm76",
+        "column": "pd76_dline",
+        "raw": "FK → 副線別代碼表，細分線別",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm76",
+        "column": "pd76_area",
+        "raw": "FK → 地區代碼表，例如：西歐、東歐",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm76",
+        "column": "pd76_darea",
+        "raw": "FK → 細地區代碼表，更細緻的地區分類",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm98",
+        "column": "pd98_hotel",
+        "raw": "FK → 旅館主檔，該方案主要使用的旅館",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      },
+      {
+        "table": "tppdm98",
+        "column": "pd98_mstfn",
+        "raw": "FK → 員工主檔",
+        "category": "C_EXTERNAL",
+        "normalized": null,
+        "rationale": "FK 指向中文命名的外部主檔"
+      }
+    ],
+    "E_UNRESOLVABLE": [
+      {
+        "table": "istbm83",
+        "column": "tb83_groupno",
+        "raw": "FK",
+        "category": "E_UNRESOLVABLE",
+        "normalized": null,
+        "rationale": "只寫 FK,無目標資訊"
+      },
+      {
+        "table": "ssorm00",
+        "column": "ordr_sales",
+        "raw": "FK → opagm20 (員工主檔)",
+        "category": "E_UNRESOLVABLE",
+        "normalized": null,
+        "rationale": "無法自動分類"
+      },
+      {
+        "table": "ssorm00",
+        "column": "ordr_agent",
+        "raw": "FK → opagm00 (法人資料主檔)",
+        "category": "E_UNRESOLVABLE",
+        "normalized": null,
+        "rationale": "無法自動分類"
+      },
+      {
+        "table": "ssorm07",
+        "column": "or07_code",
+        "raw": "FK → istbm81 (CHECKLIST)",
+        "category": "E_UNRESOLVABLE",
+        "normalized": null,
+        "rationale": "無法自動分類"
+      },
+      {
+        "table": "tppdm16",
+        "column": "pd16_demandcode",
+        "raw": "FK → istbm81 (DEMANDLIST)",
+        "category": "E_UNRESOLVABLE",
+        "normalized": null,
+        "rationale": "無法自動分類"
+      },
+      {
+        "table": "tppdm21",
+        "column": "pd21_ctokey",
+        "raw": "FK → Ctom85 (VIEW)",
+        "category": "E_UNRESOLVABLE",
+        "normalized": null,
+        "rationale": "無法自動分類"
+      }
+    ],
+    "B_POLY": [
+      {
+        "table": "ssorm02",
+        "column": "or02_crs",
+        "raw": "FK → Istbm00 (CRSKIND)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='CRSKIND'"
+      },
+      {
+        "table": "ssorm10",
+        "column": "orer_tairline",
+        "raw": "FK → Istbm00 (TAIRLINE)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='TAIRLINE'"
+      },
+      {
+        "table": "ssorm11",
+        "column": "or11_urgent_relman",
+        "raw": "FK → Istbm00 (RELMAN)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='RELMAN'"
+      },
+      {
+        "table": "ssorm11",
+        "column": "or11_meat",
+        "raw": "FK → Istbm00 (MEAT)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='MEAT'"
+      },
+      {
+        "table": "tppdm10",
+        "column": "prod_form",
+        "raw": "FK → Istbm00 (FORM)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='FORM'"
+      },
+      {
+        "table": "tppdm12",
+        "column": "pd12_meetplace",
+        "raw": "FK → Istbm00 (MEET)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='MEET'"
+      },
+      {
+        "table": "tptbm00",
+        "column": "tbm0_attr1",
+        "raw": "FK → istbm00 (ATTR)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='ATTR'"
+      },
+      {
+        "table": "tptbm00",
+        "column": "tbm0_attr2",
+        "raw": "FK → istbm00 (ATTR)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='ATTR'"
+      },
+      {
+        "table": "tptbm00",
+        "column": "tbm0_attr3",
+        "raw": "FK → istbm00 (ATTR)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='ATTR'"
+      },
+      {
+        "table": "tptbm00",
+        "column": "tbm0_psubject1",
+        "raw": "FK → istbm00 (PSUBJECT)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='PSUBJECT'"
+      },
+      {
+        "table": "tptbm00",
+        "column": "tbm0_psubject2",
+        "raw": "FK → istbm00 (PSUBJECT)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='PSUBJECT'"
+      },
+      {
+        "table": "tptbm00",
+        "column": "tbm0_psubject3",
+        "raw": "FK → istbm00 (PSUBJECT)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='PSUBJECT'"
+      },
+      {
+        "table": "tptbm10",
+        "column": "note_note",
+        "raw": "FK → Istbm00 (NOTE)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='NOTE'"
+      },
+      {
+        "table": "tptrm20",
+        "column": "tr20_freekind",
+        "raw": "FK → istbm00 (FREEKIND)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='FREEKIND'"
+      },
+      {
+        "table": "tptrm32",
+        "column": "tr32_pdhot",
+        "raw": "FK → istbm00 (PDHOT)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='PDHOT'"
+      },
+      {
+        "table": "wtorm00",
+        "column": "Wor00_crs",
+        "raw": "FK → Istbm00 (CRSKIND)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='CRSKIND'"
+      },
+      {
+        "table": "wtorm00",
+        "column": "wor00_cxldesc",
+        "raw": "FK → istbm00 (CXLDESC)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='CXLDESC'"
+      },
+      {
+        "table": "wtorm10",
+        "column": "wor10_tkperiod",
+        "raw": "FK → Istbm00 (TKPERIOD)",
+        "category": "B_POLY",
+        "normalized": null,
+        "rationale": "多型 FK:istbm00 的 tabl_type='TKPERIOD'"
+      }
+    ],
+    "A_FIXABLE": [
+      {
+        "table": "tppcm09",
+        "column": "tp09_tpform",
+        "raw": "FK → `tppcm00.tp00_tpform`",
+        "category": "A_FIXABLE",
+        "normalized": "tppcm00.tp00_tpform",
+        "rationale": "標準 FK,可直接改寫為 fk: 欄位"
+      },
+      {
+        "table": "tppcm10",
+        "column": "tp10_tpform",
+        "raw": "FK → `tppcm00.tp00_tpform`",
+        "category": "A_FIXABLE",
+        "normalized": "tppcm00.tp00_tpform",
+        "rationale": "標準 FK,可直接改寫為 fk: 欄位"
+      },
+      {
+        "table": "tppcm20",
+        "column": "tp20_tpform",
+        "raw": "FK → `tppcm00.tp00_tpform`",
+        "category": "A_FIXABLE",
+        "normalized": "tppcm00.tp00_tpform",
+        "rationale": "標準 FK,可直接改寫為 fk: 欄位"
+      },
+      {
+        "table": "tppcm21",
+        "column": "tp21_tpform",
+        "raw": "FK → `tppcm00.tp00_tpform`",
+        "category": "A_FIXABLE",
+        "normalized": "tppcm00.tp00_tpform",
+        "rationale": "標準 FK,可直接改寫為 fk: 欄位"
+      },
+      {
+        "table": "tppcm30",
+        "column": "tp30_tpform",
+        "raw": "FK → `tppcm00.tp00_tpform`",
+        "category": "A_FIXABLE",
+        "normalized": "tppcm00.tp00_tpform",
+        "rationale": "標準 FK,可直接改寫為 fk: 欄位"
+      },
+      {
+        "table": "tppcm40",
+        "column": "tp40_tpform",
+        "raw": "FK → `tppcm00.tp00_tpform`",
+        "category": "A_FIXABLE",
+        "normalized": "tppcm00.tp00_tpform",
+        "rationale": "標準 FK,可直接改寫為 fk: 欄位"
+      },
+      {
+        "table": "tppcm41",
+        "column": "tp41_tpform",
+        "raw": "FK → `tppcm00.tp00_tpform`",
+        "category": "A_FIXABLE",
+        "normalized": "tppcm00.tp00_tpform",
+        "rationale": "標準 FK,可直接改寫為 fk: 欄位"
+      },
+      {
+        "table": "tppcm50",
+        "column": "tp50_tpform",
+        "raw": "FK → `tppcm00.tp00_tpform`",
+        "category": "A_FIXABLE",
+        "normalized": "tppcm00.tp00_tpform",
+        "rationale": "標準 FK,可直接改寫為 fk: 欄位"
+      },
+      {
+        "table": "tppdm19a",
+        "column": "p19a_type",
+        "raw": "FK → ISTBM00 (TPPD19_代碼)",
+        "category": "A_FIXABLE",
+        "normalized": "ISTBM00",
+        "rationale": "標準 FK(只指到 table),可改寫為 fk: 欄位"
+      },
+      {
+        "table": "tppdm25",
+        "column": "pd25_tur2",
+        "raw": "**PK1**, FK to tppdm20.pd20_tur2",
+        "category": "A_FIXABLE",
+        "normalized": "tppdm20.pd20_tur2",
+        "rationale": "標準 FK,可直接改寫為 fk: 欄位"
+      },
+      {
+        "table": "tppdm25_ez",
+        "column": "ez25_tur2",
+        "raw": "**PK1**, FK to tppdm20_ez.ez20_tur2",
+        "category": "A_FIXABLE",
+        "normalized": "tppdm20_ez.ez20_tur2",
+        "rationale": "標準 FK,可直接改寫為 fk: 欄位"
+      },
+      {
+        "table": "wtorm00",
+        "column": "Wor00_ordrin1",
+        "raw": "FK → Istbm00 (ORDRIN1)",
+        "category": "A_FIXABLE",
+        "normalized": "Istbm00",
+        "rationale": "標準 FK(只指到 table),可改寫為 fk: 欄位"
+      },
+      {
+        "table": "wtorm00",
+        "column": "Wor00_ordrin2",
+        "raw": "FK → Istbm00 (ORDRIN2)",
+        "category": "A_FIXABLE",
+        "normalized": "Istbm00",
+        "rationale": "標準 FK(只指到 table),可改寫為 fk: 欄位"
+      },
+      {
+        "table": "wtorm00",
+        "column": "wor00_cxldesc2",
+        "raw": "FK → istbm00 (CXLDESC2)",
+        "category": "A_FIXABLE",
+        "normalized": "istbm00",
+        "rationale": "標準 FK(只指到 table),可改寫為 fk: 欄位"
+      }
+    ]
+  },
+  "total": 60
+}

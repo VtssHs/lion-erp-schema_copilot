@@ -1,0 +1,1287 @@
+{
+  "reverse_index": {
+    "tppdm10": [
+      {
+        "from": "bookm00.bk00_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "ssorm00.ordr_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm11.pd11_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm12.pd12_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm15.pd15_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm16.pd16_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm17.pd17_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm17.pd17_chdprod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm18.pd18_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm19.pd19_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm19a.p19a_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm30.pd30_prod",
+        "target_column": "tpdm10_geno",
+        "type": "fk",
+        "raw": "tppdm10.tpdm10_geno"
+      },
+      {
+        "from": "tppdm36.pd36_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm41.pd41_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm50.pd50_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm55.pd55_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm57.pd57_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm60.pd60_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm65.pd65_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm67.pd67_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm81.pd81_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm90.pd90_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm91.pd91_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm92.pd92_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      },
+      {
+        "from": "tppdm98.pd98_prod",
+        "target_column": "prod_prod",
+        "type": "fk",
+        "raw": "tppdm10.prod_prod"
+      }
+    ],
+    "bookm00": [
+      {
+        "from": "bookm01.bk01_bookno",
+        "target_column": "bk00_bookno",
+        "type": "fk",
+        "raw": "bookm00.bk00_bookno"
+      }
+    ],
+    "isbum00": [
+      {
+        "from": "ispfm00.prof_bu",
+        "target_column": null,
+        "type": "fk",
+        "raw": "isbum00"
+      },
+      {
+        "from": "tppdm91.pd91_bu",
+        "target_column": "bu00_bu",
+        "type": "fk",
+        "raw": "isbum00.bu00_bu"
+      },
+      {
+        "from": "tppdm92.pd92_bu",
+        "target_column": "bu00_bu",
+        "type": "fk",
+        "raw": "isbum00.bu00_bu"
+      },
+      {
+        "from": "tppdm93.pd93_chlbu",
+        "target_column": "bu00_bu",
+        "type": "fk",
+        "raw": "isbum00.bu00_bu"
+      },
+      {
+        "from": "tppdm93.pd93_prodbu",
+        "target_column": "bu00_bu",
+        "type": "fk",
+        "raw": "isbum00.bu00_bu"
+      },
+      {
+        "from": "tptbm20.tb20_bu",
+        "target_column": null,
+        "type": "fk",
+        "raw": "isbum00"
+      },
+      {
+        "from": "wtorm00.wor00_bu",
+        "target_column": null,
+        "type": "fk",
+        "raw": "isbum00"
+      }
+    ],
+    "istbm83": [
+      {
+        "from": "istbm83_lan.tb83lan_no",
+        "target_column": null,
+        "type": "fk",
+        "raw": "istbm83"
+      },
+      {
+        "from": "tptbm06.tbm6_no",
+        "target_column": null,
+        "type": "fk",
+        "raw": "istbm83"
+      }
+    ],
+    "ssorm00": [
+      {
+        "from": "ssorm01.or01_ordr",
+        "target_column": "ordr_ordr",
+        "type": "fk",
+        "raw": "ssorm00.ordr_ordr"
+      },
+      {
+        "from": "ssorm01.or01_year",
+        "target_column": "ordr_year",
+        "type": "fk",
+        "raw": "ssorm00.ordr_year"
+      },
+      {
+        "from": "ssorm02.or02_ordr",
+        "target_column": "ordr_ordr",
+        "type": "fk",
+        "raw": "ssorm00.ordr_ordr"
+      },
+      {
+        "from": "ssorm02.or02_year",
+        "target_column": "ordr_year",
+        "type": "fk",
+        "raw": "ssorm00.ordr_year"
+      },
+      {
+        "from": "ssorm03.or03_ordr",
+        "target_column": "ordr_ordr",
+        "type": "fk",
+        "raw": "ssorm00.ordr_ordr"
+      },
+      {
+        "from": "ssorm03.or03_year",
+        "target_column": "ordr_year",
+        "type": "fk",
+        "raw": "ssorm00.ordr_year"
+      },
+      {
+        "from": "ssorm04.or04_ordr",
+        "target_column": "ordr_ordr",
+        "type": "fk",
+        "raw": "ssorm00.ordr_ordr"
+      },
+      {
+        "from": "ssorm04.or04_year",
+        "target_column": "ordr_year",
+        "type": "fk",
+        "raw": "ssorm00.ordr_year"
+      },
+      {
+        "from": "ssorm05.or05_ordr",
+        "target_column": "ordr_ordr",
+        "type": "fk",
+        "raw": "ssorm00.ordr_ordr"
+      },
+      {
+        "from": "ssorm06.or06_ordr",
+        "target_column": "ordr_ordr",
+        "type": "fk",
+        "raw": "ssorm00.ordr_ordr"
+      },
+      {
+        "from": "ssorm06.or06_year",
+        "target_column": "ordr_year",
+        "type": "fk",
+        "raw": "ssorm00.ordr_year"
+      },
+      {
+        "from": "ssorm07.or07_ordr",
+        "target_column": "ordr_ordr",
+        "type": "fk",
+        "raw": "ssorm00.ordr_ordr"
+      },
+      {
+        "from": "ssorm07.or07_year",
+        "target_column": "ordr_year",
+        "type": "fk",
+        "raw": "ssorm00.ordr_year"
+      },
+      {
+        "from": "ssorm10.orer_ordr",
+        "target_column": "ordr_ordr",
+        "type": "fk",
+        "raw": "ssorm00.ordr_ordr"
+      },
+      {
+        "from": "ssorm10.orer_year",
+        "target_column": "ordr_year",
+        "type": "fk",
+        "raw": "ssorm00.ordr_year"
+      },
+      {
+        "from": "ssorm12.or12_ordr",
+        "target_column": "ordr_ordr",
+        "type": "fk",
+        "raw": "ssorm00.ordr_ordr"
+      },
+      {
+        "from": "ssorm12.or12_year",
+        "target_column": "ordr_year",
+        "type": "fk",
+        "raw": "ssorm00.ordr_year"
+      },
+      {
+        "from": "tppdm66.pd66_ordr",
+        "target_column": "ordr_ordr",
+        "type": "fk",
+        "raw": "ssorm00.ordr_ordr"
+      },
+      {
+        "from": "tppdm66.pd66_year",
+        "target_column": "ordr_year",
+        "type": "fk",
+        "raw": "ssorm00.ordr_year"
+      }
+    ],
+    "istbm00": [
+      {
+        "from": "ssorm02.or02_crs",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → Istbm00 (CRSKIND)"
+      },
+      {
+        "from": "ssorm10.orer_tairline",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → Istbm00 (TAIRLINE)"
+      },
+      {
+        "from": "ssorm11.or11_urgent_relman",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → Istbm00 (RELMAN)"
+      },
+      {
+        "from": "ssorm11.or11_meat",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → Istbm00 (MEAT)"
+      },
+      {
+        "from": "tppdm10.prod_project",
+        "target_column": null,
+        "type": "fk",
+        "raw": "istbm00"
+      },
+      {
+        "from": "tppdm10.prod_form",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → Istbm00 (FORM)"
+      },
+      {
+        "from": "tppdm12.pd12_meetplace",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → Istbm00 (MEET)"
+      },
+      {
+        "from": "tppdm19a.p19a_type",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → ISTBM00 (TPPD19_代碼)"
+      },
+      {
+        "from": "tptbm00.tbm0_attr1",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → istbm00 (ATTR)"
+      },
+      {
+        "from": "tptbm00.tbm0_attr2",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → istbm00 (ATTR)"
+      },
+      {
+        "from": "tptbm00.tbm0_attr3",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → istbm00 (ATTR)"
+      },
+      {
+        "from": "tptbm00.tbm0_psubject1",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → istbm00 (PSUBJECT)"
+      },
+      {
+        "from": "tptbm00.tbm0_psubject2",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → istbm00 (PSUBJECT)"
+      },
+      {
+        "from": "tptbm00.tbm0_psubject3",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → istbm00 (PSUBJECT)"
+      },
+      {
+        "from": "tptbm10.note_note",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → Istbm00 (NOTE)"
+      },
+      {
+        "from": "tptrm20.tr20_freekind",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → istbm00 (FREEKIND)"
+      },
+      {
+        "from": "tptrm32.tr32_pdhot",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → istbm00 (PDHOT)"
+      },
+      {
+        "from": "wtorm00.Wor00_ordrin1",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → Istbm00 (ORDRIN1)"
+      },
+      {
+        "from": "wtorm00.Wor00_ordrin2",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → Istbm00 (ORDRIN2)"
+      },
+      {
+        "from": "wtorm00.Wor00_crs",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → Istbm00 (CRSKIND)"
+      },
+      {
+        "from": "wtorm00.wor00_cxldesc",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → istbm00 (CXLDESC)"
+      },
+      {
+        "from": "wtorm00.wor00_cxldesc2",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → istbm00 (CXLDESC2)"
+      },
+      {
+        "from": "wtorm10.wor10_tkperiod",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → Istbm00 (TKPERIOD)"
+      }
+    ],
+    "ssorm10": [
+      {
+        "from": "ssorm11.or11_ordr",
+        "target_column": "orer_ordr",
+        "type": "fk",
+        "raw": "ssorm10.orer_ordr"
+      },
+      {
+        "from": "ssorm11.or11_year",
+        "target_column": "orer_year",
+        "type": "fk",
+        "raw": "ssorm10.orer_year"
+      },
+      {
+        "from": "ssorm11.or11_seq",
+        "target_column": "orer_seq",
+        "type": "fk",
+        "raw": "ssorm10.orer_seq"
+      },
+      {
+        "from": "ssorm12.or12_seq",
+        "target_column": "orer_seq",
+        "type": "fk",
+        "raw": "ssorm10.orer_seq"
+      },
+      {
+        "from": "ssorm13.or13_ordr",
+        "target_column": "orer_ordr",
+        "type": "fk",
+        "raw": "ssorm10.orer_ordr"
+      },
+      {
+        "from": "ssorm13.or13_year",
+        "target_column": "orer_year",
+        "type": "fk",
+        "raw": "ssorm10.orer_year"
+      },
+      {
+        "from": "tppdm66.pd66_seq",
+        "target_column": "orer_seq",
+        "type": "fk",
+        "raw": "ssorm10.orer_seq"
+      }
+    ],
+    "ssorm13": [
+      {
+        "from": "ssorm14.or14_ordr",
+        "target_column": "or13_ordr",
+        "type": "fk",
+        "raw": "ssorm13.or13_ordr"
+      },
+      {
+        "from": "ssorm14.or14_year",
+        "target_column": "or13_year",
+        "type": "fk",
+        "raw": "ssorm13.or13_year"
+      },
+      {
+        "from": "ssorm14.or14_seq",
+        "target_column": "or13_seq",
+        "type": "fk",
+        "raw": "ssorm13.or13_seq"
+      }
+    ],
+    "tppcm00": [
+      {
+        "from": "tppcm09.tp09_tpform",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → `tppcm00.tp00_tpform`"
+      },
+      {
+        "from": "tppcm10.tp10_tpform",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → `tppcm00.tp00_tpform`"
+      },
+      {
+        "from": "tppcm20.tp20_tpform",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → `tppcm00.tp00_tpform`"
+      },
+      {
+        "from": "tppcm21.tp21_tpform",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → `tppcm00.tp00_tpform`"
+      },
+      {
+        "from": "tppcm30.tp30_tpform",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → `tppcm00.tp00_tpform`"
+      },
+      {
+        "from": "tppcm40.tp40_tpform",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → `tppcm00.tp00_tpform`"
+      },
+      {
+        "from": "tppcm41.tp41_tpform",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → `tppcm00.tp00_tpform`"
+      },
+      {
+        "from": "tppcm50.tp50_tpform",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "FK → `tppcm00.tp00_tpform`"
+      }
+    ],
+    "tptbm20": [
+      {
+        "from": "tppdm10.prod_webarea",
+        "target_column": "tb20_webarea",
+        "type": "fk",
+        "raw": "Tptbm20.tb20_webarea"
+      },
+      {
+        "from": "tptbm00.tbm0_webarea",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm20"
+      },
+      {
+        "from": "tptbm20_lang.tb20_lang_webarea",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm20"
+      },
+      {
+        "from": "tptrm22.tr22_webarea",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm20"
+      }
+    ],
+    "tppcm40": [
+      {
+        "from": "tppdm10.prod_tpform",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tppcm40"
+      },
+      {
+        "from": "tppdm10.prod_size",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tppcm40"
+      }
+    ],
+    "tppdm20": [
+      {
+        "from": "tppdm21.pd21_tur2",
+        "target_column": "pd20_tur2",
+        "type": "fk",
+        "raw": "tppdm20.pd20_tur2"
+      },
+      {
+        "from": "tppdm22.pd22_tur2",
+        "target_column": "pd20_tur2",
+        "type": "fk",
+        "raw": "tppdm20.pd20_tur2"
+      },
+      {
+        "from": "tppdm23.pd23_tur2",
+        "target_column": "pd20_tur2",
+        "type": "fk",
+        "raw": "tppdm20.pd20_tur2"
+      },
+      {
+        "from": "tppdm24.pd24_tur2",
+        "target_column": "pd20_tur2",
+        "type": "fk",
+        "raw": "tppdm20.pd20_tur2"
+      },
+      {
+        "from": "tppdm25.pd25_tur2",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "**PK1**, FK to tppdm20.pd20_tur2"
+      },
+      {
+        "from": "tppdm26.pd26_tur2",
+        "target_column": "pd20_tur2",
+        "type": "fk",
+        "raw": "tppdm20.pd20_tur2"
+      },
+      {
+        "from": "tppdm27.pd27_tur2",
+        "target_column": "pd20_tur2",
+        "type": "fk",
+        "raw": "tppdm20.pd20_tur2"
+      }
+    ],
+    "tppdm20_ez": [
+      {
+        "from": "tppdm21_ez.ez21_tur2",
+        "target_column": "ez20_tur2",
+        "type": "fk",
+        "raw": "tppdm20_ez.ez20_tur2"
+      },
+      {
+        "from": "tppdm25_ez.ez25_tur2",
+        "target_column": null,
+        "type": "fk_note",
+        "raw": "**PK1**, FK to tppdm20_ez.ez20_tur2"
+      }
+    ],
+    "tppdm62": [
+      {
+        "from": "tppdm64.pd64_localtour",
+        "target_column": "pd62_localtour",
+        "type": "fk",
+        "raw": "tppdm62.pd62_localtour"
+      },
+      {
+        "from": "tppdm66.pd66_localtour",
+        "target_column": "pd62_localtour",
+        "type": "fk",
+        "raw": "tppdm62.pd62_localtour"
+      }
+    ],
+    "tppdm64": [
+      {
+        "from": "tppdm66.pd66_date",
+        "target_column": "pd64_date",
+        "type": "fk",
+        "raw": "tppdm64.pd64_date"
+      },
+      {
+        "from": "tppdm66.pd66_bus",
+        "target_column": "pd64_bus",
+        "type": "fk",
+        "raw": "tppdm64.pd64_bus"
+      }
+    ],
+    "tppdm98": [
+      {
+        "from": "tppdm90.pd90_pd98no",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tppdm98"
+      }
+    ],
+    "isbum01": [
+      {
+        "from": "tppdm92.pd92_chl",
+        "target_column": "bu01_channel",
+        "type": "fk",
+        "raw": "isbum01.bu01_channel"
+      },
+      {
+        "from": "tppdm93.pd93_chl",
+        "target_column": "bu01_channel",
+        "type": "fk",
+        "raw": "isbum01.bu01_channel"
+      }
+    ],
+    "istbm10": [
+      {
+        "from": "tptbm00.tbm0_line",
+        "target_column": null,
+        "type": "fk",
+        "raw": "istbm10"
+      },
+      {
+        "from": "tptbm02.tbm2_line",
+        "target_column": null,
+        "type": "fk",
+        "raw": "istbm10"
+      },
+      {
+        "from": "tptbm15.tb15_line",
+        "target_column": null,
+        "type": "fk",
+        "raw": "istbm10"
+      }
+    ],
+    "tptbm00": [
+      {
+        "from": "tptbm06.tbm6_code",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm00"
+      },
+      {
+        "from": "tptbm09.tbm9_name",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm00"
+      },
+      {
+        "from": "tptbm11.tb11_name",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm00"
+      },
+      {
+        "from": "tptrm32.tr32_name",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm00"
+      }
+    ],
+    "tptbm10": [
+      {
+        "from": "tptbm11.tb11_note",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm10"
+      },
+      {
+        "from": "tptbm11.tb11_country",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm10"
+      },
+      {
+        "from": "tptbm11.tb11_area",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm10"
+      },
+      {
+        "from": "tptbm11.tb11_darea",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm10"
+      },
+      {
+        "from": "tptbm11.tb11_seq",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm10"
+      }
+    ],
+    "tptrm20": [
+      {
+        "from": "tptrm21.tr21_travel",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptrm20"
+      },
+      {
+        "from": "tptrm22.tr22_travel",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptrm20"
+      },
+      {
+        "from": "tptrm30.tr30_travel",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptrm20"
+      }
+    ],
+    "tptrm30": [
+      {
+        "from": "tptrm32.tr32_travel",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptrm30"
+      },
+      {
+        "from": "tptrm32.tr32_group",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptrm30"
+      }
+    ],
+    "wtorm00": [
+      {
+        "from": "wtorm10.Wor10_wtordr",
+        "target_column": "Wor00_wtordr",
+        "type": "fk",
+        "raw": "wtorm00.Wor00_wtordr"
+      },
+      {
+        "from": "wtorm10.Wor10_wtyear",
+        "target_column": "Wor00_wtyear",
+        "type": "fk",
+        "raw": "wtorm00.Wor00_wtyear"
+      },
+      {
+        "from": "wtorm20.Wor20_wtordr",
+        "target_column": "Wor00_wtordr",
+        "type": "fk",
+        "raw": "wtorm00.Wor00_wtordr"
+      },
+      {
+        "from": "wtorm20.Wor20_wtyear",
+        "target_column": "Wor00_wtyear",
+        "type": "fk",
+        "raw": "wtorm00.Wor00_wtyear"
+      },
+      {
+        "from": "wtorm30.wor30_wtordr",
+        "target_column": "Wor00_wtordr",
+        "type": "fk",
+        "raw": "wtorm00.Wor00_wtordr"
+      },
+      {
+        "from": "wtorm30.wor30_wtyear",
+        "target_column": "Wor00_wtyear",
+        "type": "fk",
+        "raw": "wtorm00.Wor00_wtyear"
+      }
+    ]
+  },
+  "external_refs": {
+    "_unresolved_fk_note_": [
+      {
+        "from": "bookm00.bk00_ctokey",
+        "raw": "FK → 各類別主檔 (ophtm/opmtm/opbsm/opvim/opspm)"
+      },
+      {
+        "from": "istbm83.tb83_groupno",
+        "raw": "FK"
+      },
+      {
+        "from": "ssorm00.ordr_sales",
+        "raw": "FK → opagm20 (員工主檔)"
+      },
+      {
+        "from": "ssorm00.ordr_agent",
+        "raw": "FK → opagm00 (法人資料主檔)"
+      },
+      {
+        "from": "ssorm07.or07_code",
+        "raw": "FK → istbm81 (CHECKLIST)"
+      },
+      {
+        "from": "tppdm16.pd16_vscountry1",
+        "raw": "FK → 國家代碼表"
+      },
+      {
+        "from": "tppdm16.pd16_vsseq1",
+        "raw": "FK → 簽證類型表"
+      },
+      {
+        "from": "tppdm16.pd16_vscountry2",
+        "raw": "FK → 國家代碼表"
+      },
+      {
+        "from": "tppdm16.pd16_vsseq2",
+        "raw": "FK → 簽證類型表"
+      },
+      {
+        "from": "tppdm16.pd16_safecode",
+        "raw": "FK → 保險承辦單位代碼表"
+      },
+      {
+        "from": "tppdm16.pd16_safemode",
+        "raw": "FK → 交通工具代碼表"
+      },
+      {
+        "from": "tppdm16.pd16_SafeInsComp",
+        "raw": "FK → 保險公司代碼表"
+      },
+      {
+        "from": "tppdm16.pd16_demandcode",
+        "raw": "FK → istbm81 (DEMANDLIST)"
+      },
+      {
+        "from": "tppdm20.pd20_prodname",
+        "raw": "FK → 標準團名檔，有值時行程名稱=NULL"
+      },
+      {
+        "from": "tppdm21.pd21_ctokey",
+        "raw": "FK → Ctom85 (VIEW)"
+      },
+      {
+        "from": "tppdm24.pd24_ctokey",
+        "raw": "FK → 對應的主檔（景點/餐廳/旅館/商店）"
+      },
+      {
+        "from": "tppdm50.pd50_hotel",
+        "raw": "FK → 旅館主檔 (ophtm*)"
+      },
+      {
+        "from": "tppdm55.pd55_bkstfn",
+        "raw": "只存第一次設定者，FK → 員工主檔"
+      },
+      {
+        "from": "tppdm56.pd56_local",
+        "raw": "**PK1**, FK → 供應商主檔，配合 B2P 系統型態"
+      },
+      {
+        "from": "tppdm56.pd56_code",
+        "raw": "FK → 欄位代碼主檔"
+      },
+      {
+        "from": "tppdm57.pd57_local",
+        "raw": "**PK2**, FK → 供應商主檔"
+      },
+      {
+        "from": "tppdm57.pd57_coltype",
+        "raw": "**PK3**, FK → 欄位代碼主檔"
+      },
+      {
+        "from": "tppdm76.pd76_line",
+        "raw": "FK → 線別代碼表，例如：歐洲線、美洲線"
+      },
+      {
+        "from": "tppdm76.pd76_dline",
+        "raw": "FK → 副線別代碼表，細分線別"
+      },
+      {
+        "from": "tppdm76.pd76_area",
+        "raw": "FK → 地區代碼表，例如：西歐、東歐"
+      },
+      {
+        "from": "tppdm76.pd76_darea",
+        "raw": "FK → 細地區代碼表，更細緻的地區分類"
+      },
+      {
+        "from": "tppdm98.pd98_hotel",
+        "raw": "FK → 旅館主檔，該方案主要使用的旅館"
+      },
+      {
+        "from": "tppdm98.pd98_mstfn",
+        "raw": "FK → 員工主檔"
+      }
+    ],
+    "opagm10": [
+      {
+        "from": "bookm00.bk00_local",
+        "target_column": null,
+        "type": "fk",
+        "raw": "opagm10"
+      }
+    ],
+    "iscpm11": [
+      {
+        "from": "bookm00.bk00_payfor",
+        "target_column": null,
+        "type": "fk",
+        "raw": "iscpm11"
+      }
+    ],
+    "optbm70": [
+      {
+        "from": "bookm00.bk00_bus_carr",
+        "target_column": null,
+        "type": "fk",
+        "raw": "optbm70"
+      }
+    ],
+    "optbm30": [
+      {
+        "from": "bookm00.bk00_meatstyle",
+        "target_column": null,
+        "type": "fk",
+        "raw": "optbm30"
+      },
+      {
+        "from": "bookm01.bk01_meatstyle",
+        "target_column": null,
+        "type": "fk",
+        "raw": "optbm30"
+      }
+    ],
+    "customer": [
+      {
+        "from": "ssorm00.ordr_cust",
+        "target_column": null,
+        "type": "fk",
+        "raw": "customer"
+      }
+    ],
+    "opagm20": [
+      {
+        "from": "tppdm14.pd14_tl",
+        "target_column": null,
+        "type": "fk",
+        "raw": "opagm20"
+      }
+    ],
+    "optnm00": [
+      {
+        "from": "tppdm15.pd15_option",
+        "target_column": null,
+        "type": "fk",
+        "raw": "optnm00"
+      },
+      {
+        "from": "tppdm23.pd23_option",
+        "target_column": null,
+        "type": "fk",
+        "raw": "optnm00"
+      }
+    ],
+    "tptbm": [
+      {
+        "from": "tppdm20.pd20_line",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm"
+      },
+      {
+        "from": "tppdm20.pd20_dline",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm"
+      },
+      {
+        "from": "tppdm20.pd20_area",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm"
+      },
+      {
+        "from": "tppdm20.pd20_darea",
+        "target_column": null,
+        "type": "fk",
+        "raw": "tptbm"
+      }
+    ],
+    "PCM": [
+      {
+        "from": "tppdm20.pd20_tripidno",
+        "target_column": "dbo",
+        "type": "fk",
+        "raw": "PCM.dbo"
+      }
+    ],
+    "optbm20": [
+      {
+        "from": "tppdm26.pd26_station",
+        "target_column": "tb20_station",
+        "type": "fk",
+        "raw": "optbm20.tb20_station"
+      },
+      {
+        "from": "tppdm26.pd26_station1",
+        "target_column": "tb20_station",
+        "type": "fk",
+        "raw": "optbm20.tb20_station"
+      },
+      {
+        "from": "tppdm36.pd36_station",
+        "target_column": "tb20_station",
+        "type": "fk",
+        "raw": "optbm20.tb20_station"
+      },
+      {
+        "from": "tppdm36.pd36_station1",
+        "target_column": "tb20_station",
+        "type": "fk",
+        "raw": "optbm20.tb20_station"
+      }
+    ],
+    "optbm11": [
+      {
+        "from": "tppdm40.pd40_fairport",
+        "target_column": null,
+        "type": "fk",
+        "raw": "optbm11"
+      },
+      {
+        "from": "tppdm40.pd40_tairport",
+        "target_column": null,
+        "type": "fk",
+        "raw": "optbm11"
+      }
+    ],
+    "B2P供應商主檔": [
+      {
+        "from": "tppdm55.pd55_local",
+        "target_column": null,
+        "type": "fk",
+        "raw": "B2P供應商主檔"
+      }
+    ],
+    "opvim00": [
+      {
+        "from": "tppdm63.pd63_view",
+        "target_column": null,
+        "type": "fk",
+        "raw": "opvim00"
+      }
+    ],
+    "tppdm72": [
+      {
+        "from": "tppdm67.pd67_rtno",
+        "target_column": "pd72_rtno",
+        "type": "fk",
+        "raw": "tppdm72.pd72_rtno"
+      }
+    ],
+    "DBA": [
+      {
+        "from": "wtorm30.wor30_orderseq",
+        "target_column": null,
+        "type": "fk",
+        "raw": "DBA"
+      }
+    ],
+    "HTORM31": [
+      {
+        "from": "wtorm30.wor30_hor31descseq",
+        "target_column": "HOR31_DESC",
+        "type": "fk",
+        "raw": "HTORM31.HOR31_DESC"
+      }
+    ],
+    "ophtm70": [
+      {
+        "from": "wtorm30.wor30_discount",
+        "target_column": null,
+        "type": "fk",
+        "raw": "ophtm70"
+      }
+    ]
+  },
+  "zero_ref_tables": [
+    "bookm01",
+    "bookm10",
+    "isbum02",
+    "isbum03",
+    "iscpm00",
+    "iscpm21",
+    "ispfm00",
+    "istbm11",
+    "istbm12",
+    "istbm20",
+    "istbm82",
+    "istbm83_lan",
+    "optbm18",
+    "ssorm01",
+    "ssorm02",
+    "ssorm03",
+    "ssorm04",
+    "ssorm05",
+    "ssorm06",
+    "ssorm07",
+    "ssorm11",
+    "ssorm12",
+    "ssorm14",
+    "tppcm09",
+    "tppcm10",
+    "tppcm20",
+    "tppcm21",
+    "tppcm30",
+    "tppcm41",
+    "tppcm50",
+    "tppdm11",
+    "tppdm12",
+    "tppdm13",
+    "tppdm14",
+    "tppdm15",
+    "tppdm16",
+    "tppdm17",
+    "tppdm18",
+    "tppdm19",
+    "tppdm19a",
+    "tppdm21",
+    "tppdm21_ez",
+    "tppdm22",
+    "tppdm23",
+    "tppdm24",
+    "tppdm25",
+    "tppdm25_ez",
+    "tppdm26",
+    "tppdm27",
+    "tppdm30",
+    "tppdm36",
+    "tppdm40",
+    "tppdm41",
+    "tppdm50",
+    "tppdm55",
+    "tppdm56",
+    "tppdm57",
+    "tppdm60",
+    "tppdm61",
+    "tppdm63",
+    "tppdm65",
+    "tppdm66",
+    "tppdm67",
+    "tppdm76",
+    "tppdm81",
+    "tppdm90",
+    "tppdm91",
+    "tppdm92",
+    "tppdm93",
+    "tptbm02",
+    "tptbm06",
+    "tptbm09",
+    "tptbm11",
+    "tptbm15",
+    "tptbm20_lang",
+    "tptbm30",
+    "tptbm31",
+    "tptrm21",
+    "tptrm22",
+    "tptrm32",
+    "wtorm10",
+    "wtorm20",
+    "wtorm30"
+  ],
+  "stats": {
+    "total_tables": 106,
+    "referenced_tables": 23,
+    "zero_ref_tables": 83,
+    "external_refs_count": 26
+  }
+}
